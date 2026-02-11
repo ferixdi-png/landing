@@ -3,175 +3,501 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FERIXDI — AI‑Reels трафик → продукт</title>
-  <meta name="description" content="Серийные AI‑Reels как система: бесплатный трафик, стабильные охваты и перевод внимания в личные сообщения и заявки." />
+  <title>FERIXDI — схема бесплатного трафика на AI‑видео + бот с нейронками под ключ</title>
+  <meta name="description" content="Два продукта в одной логике: схема серийных AI‑Reels для органического трафика и коробочный Telegram‑бот‑хаб с зарубежными нейросетями и оплатой в Telegram Stars." />
+  <meta name="theme-color" content="#0b0e14" />
+  <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <div class="bg">
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <div class="bg__noise" aria-hidden="true"></div>
+  </div>
 
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">FERIXDI</div>
+  <header class="topbar" data-elevates>
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="FERIXDI">
+        <span class="brand__mark">F</span>
+        <span class="brand__text">
+          <span class="brand__name">FERIXDI</span>
+          <span class="brand__tag">AI‑видео → органика → продукт</span>
+        </span>
+      </a>
 
-      <nav class="topnav" aria-label="Навигация">
-        <a class="topnav__link" href="https://telegra.ph/Kak-ya-za-60-dnej-sdelal-21-000-podpischikov-i-zapustil-konvejer-millionnyh-AI-Reels-02-06" target="_blank" rel="noreferrer">Статья про бесплатный трафик</a>
-        <a class="topnav__link" href="https://telegra.ph/Dlya-teh-kto-uzhe-lyot-trafik-na-Syntx-02-10" target="_blank" rel="noreferrer">Статья про свой продукт</a>
-        <a class="topnav__link topnav__link--primary" href="https://t.me/ferixdiii" target="_blank" rel="noreferrer">Личка</a>
+      <nav class="nav" aria-label="Навигация">
+        <a class="nav__link" href="#traffic">Схема трафика</a>
+        <a class="nav__link" href="#bot">Бот под ключ</a>
+        <a class="nav__link" href="#frames">18 кадров</a>
+        <a class="nav__btn" href="#contacts">Контакт</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <div class="pill">AI‑Reels трафик → продукт</div>
-          <h1>История, где просмотры превращаются в действие</h1>
+      <div class="container hero__grid">
+        <div class="hero__copy" data-reveal>
+          <div class="pill">
+            <span class="pill__dot"></span>
+            <span>2 продукта</span>
+            <span class="pill__sep">•</span>
+            <span>1 логика</span>
+          </div>
+
+          <h1 class="h1">
+            Бесплатный трафик из <span class="accent">AI‑видео</span>
+            <br />и свой продукт, который забирает повторные оплаты
+          </h1>
+
           <p class="lead">
-            Если ты уже льёшь трафик на Syntx, главный навык у тебя есть — добывать зрителя и доводить до оплаты.
-            Разница одна: витрина чужая, а актив разгоняешь не себе.
-            Я предлагаю вариант, где продукт становится твоим — коробочный Telegram‑бот‑хаб с зарубежными нейросетями, оплатой в Telegram Stars и простым доступом в одном месте.
-            Параллельно я показываю механику серийных AI‑Reels, которая дала 21&nbsp;000+ подписчиков и 20&nbsp;806&nbsp;710 просмотров за 30 дней на органике.
-            Детали, метрики и примеры — в двух статьях в конце страницы.
+            Я собрал это в два понятных продукта. Первый — схема серийных AI‑Reels, чтобы органика стала предсказуемой.
+            Второй — коробочный Telegram‑бот‑хаб с зарубежными нейросетями, оплатой в Telegram Stars и простым доступом в одном месте.
+            Все детали и примеры — в статьях, ссылки лежат ниже.
           </p>
-          <div class="hero-metrics">
-            <div class="metric"><div class="metric-num">21 000+</div><div class="metric-label">подписчиков на органике</div></div>
-            <div class="metric"><div class="metric-num">20 806 710</div><div class="metric-label">просмотров за 30 дней</div></div>
-            <div class="metric"><div class="metric-num">~10 минут</div><div class="metric-label">на один ролик без автосборки</div></div>
+
+          <div class="hero__metrics" role="list" aria-label="Ключевые метрики">
+            <div class="metric" role="listitem">
+              <div class="metric__k">подписчики</div>
+              <div class="metric__v" data-count="21000">21&nbsp;000+</div>
+              <div class="metric__s">органика за 60 дней</div>
+            </div>
+            <div class="metric" role="listitem">
+              <div class="metric__k">просмотры</div>
+              <div class="metric__v" data-count="20806710">20&nbsp;806&nbsp;710</div>
+              <div class="metric__s">за 30 дней</div>
+            </div>
+            <div class="metric" role="listitem">
+              <div class="metric__k">производство</div>
+              <div class="metric__v" data-count="10">~10</div>
+              <div class="metric__s">минут на ролик без автосборки</div>
+            </div>
           </div>
 
-          <div class="product-strip">
-            <div class="product-card">
-              <div class="product-title">Если уже льёшь на Syntx</div>
-              <div class="product-text">Ты умеешь главное — запускать поток и доводить до оплаты. Я предлагаю переставить витрину на свой рельс: трафик идёт в твой продукт, а повторные оплаты остаются у тебя.</div>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#traffic">Схема трафика</a>
+            <a class="btn" href="#bot">Бот под ключ</a>
+            <a class="btn btn--ghost" href="https://telegra.ph/Kak-ya-za-60-dnej-sdelal-21-000-podpischikov-i-zapustil-konvejer-millionnyh-AI-Reels-02-06" target="_blank" rel="noreferrer">Статья с цифрами</a>
+          </div>
+
+          <p class="fine">
+            Сайт — хаб. Подробности лежат в статье про «60 дней / 21&nbsp;000+».
+            На этой странице я собрал суть, чтобы логика читалась за минуту.
+          </p>
+        </div>
+
+        <div class="hero__show" data-reveal>
+          <div class="showcard" aria-label="Карта продуктов">
+            <div class="showcard__top">
+              <button class="seg is-active" data-seg="traffic" type="button">Схема трафика</button>
+              <button class="seg" data-seg="bot" type="button">Бот под ключ</button>
             </div>
-            <div class="product-card">
-              <div class="product-title">Коробка без кастома</div>
-              <div class="product-text">Запуск быстрый, потому что это пакетное решение. Внутри — ходовые модели (включая Nano Banana, Sora и другие), единая витрина, платежи в Telegram Stars, понятный UX под контент‑поток.</div>
+
+            <div class="showcard__body">
+              <div class="panel is-active" data-panel="traffic">
+                <div class="panel__title">Серийные AI‑Reels</div>
+                <div class="panel__text">Тема одна, крючки разные. Алгоритм быстрее понимает формат, зритель привыкает к продолжению.</div>
+                <ul class="bullets">
+                  <li>маршрут зрителя до личных сообщений</li>
+                  <li>конвейер идеи → публикация</li>
+                  <li>рост по метрикам, а не по вдохновению</li>
+                </ul>
+                <a class="mini" href="#frames">Посмотреть 18 кадров →</a>
+              </div>
+
+              <div class="panel" data-panel="bot">
+                <div class="panel__title">Telegram‑бот‑хаб</div>
+                <div class="panel__text">Зарубежные нейросети в одной витрине, платежи в Stars, понятный UX под поток из Reels.</div>
+                <ul class="bullets">
+                  <li>развёртывание под ключ</li>
+                  <li>оплата в рублях через Stars</li>
+                  <li>готово к монетизации аудитории</li>
+                </ul>
+                <a class="mini" href="#bot">Что внутри →</a>
+              </div>
             </div>
-            <div class="product-card">
-              <div class="product-title">Монетизация как привычка</div>
-              <div class="product-text">Вход через бесплатные генерации → привычка → спокойный переход в платные. Не «дожим», а удобство: человек возвращается за контентом, потому что всё в одном месте.</div>
+
+            <div class="showcard__media" aria-hidden="true">
+              <img class="media is-active" data-media="traffic" src="assets/img/ai-01.jpg" alt="" loading="lazy" />
+              <img class="media" data-media="bot" src="assets/img/ai-02.jpg" alt="" loading="lazy" />
+              <div class="overlay">
+                <div class="overlay__tag" data-overlay="traffic">Серия → органика</div>
+                <div class="overlay__tag" data-overlay="bot">Продукт → повтор</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="frames" id="story">
+    <section class="section" id="traffic">
       <div class="container">
-        <h2>Короткая история в 18 кадрах</h2>
-        <p class="frames-sub">Каждый кадр фиксирует один принцип схемы бесплатного трафика. Фото — ситуация, подпись — понятный вывод, который сразу ложится в действия.</p>
-      </div>
+        <div class="section__head" data-reveal>
+          <div class="eyebrow">Продукт №1</div>
+          <h2>Схема бесплатного трафика на AI‑видео</h2>
+          <p>
+            Суть простая. Серия вместо разовых залётов. Один понятный маршрут зрителя.
+            Конвейер выпуска, чтобы ролики выходили регулярно и улучшались по цифрам.
+          </p>
+        </div>
 
-      <div class="container">
-        <div class="masonry" aria-label="История в 18 кадрах">
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-01.jpg" alt="Серия вместо разовых залётов" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Серия вместо разовых залётов</div><div class="label-text">Единый формат, меняя крючки и эмоции, даёт алгоритму понятный сигнал и стабилизирует органику.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-02.jpg" alt="Путь зрителя до личных сообщений" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Путь зрителя до личных сообщений</div><div class="label-text">Хук → досмотр → профиль → диалог. Ролик цепляет, профиль дожимает доверие, личка закрывает шаг.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-03.jpg" alt="Конвейер выпуска" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Конвейер выпуска</div><div class="label-text">Идея → преобразование → результат → публикация серией. Рост идёт по метрикам, а не по вдохновению.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-04.jpg" alt="Удержание важнее удачи" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Удержание важнее удачи</div><div class="label-text">Охват живёт дольше, когда люди возвращаются за продолжением и догоняют прошлые ролики.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-05.jpg" alt="Сценарий вместо хаоса" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Сценарий вместо хаоса</div><div class="label-text">Короткий сценарный шаблон держит темп и делает результат повторяемым даже на обычных идеях.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-06.jpg" alt="Метрики управляют ростом" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Метрики управляют ростом</div><div class="label-text">Удержание, досмотры, сохранения, переходы в профиль, доля диалогов — по ним понятно, что усиливать.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-07.jpg" alt="Алгоритм любит последовательность" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Алгоритм любит последовательность</div><div class="label-text">Серия — это продукт в глазах платформы. Один стиль, одна тема, разные ситуации.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-08.jpg" alt="Профиль как витрина доверия" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Профиль как витрина доверия</div><div class="label-text">Люди пишут чаще, когда видят понятный оффер и доказательства в закрепах и шапке.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-09.jpg" alt="Повторяемость — главный актив" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Повторяемость — главный актив</div><div class="label-text">Один удачный ролик шумит. Серия даёт предсказуемые входящие и накапливает эффект.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-10.jpg" alt="Вариации крючков" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Вариации крючков</div><div class="label-text">Меняя первые секунды и угол подачи, оставаясь в той же теме, повышаешь шанс на вирусность.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-11.jpg" alt="Качество серии" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Качество серии</div><div class="label-text">Чек‑лист по ролику держит уровень и убирает провалы, когда контент идёт потоком.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-12.jpg" alt="Диалог без лишней болтовни" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Диалог без лишней болтовни</div><div class="label-text">Быстрый ответ и понятный следующий шаг повышают конверсию из интереса в контакт.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-13.jpg" alt="Оффер в одном предложении" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Оффер в одном предложении</div><div class="label-text">Чёткая формулировка снижает трение. Зритель понимает, зачем писать, за 2–3 секунды.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-14.jpg" alt="Трафик на свой продукт" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Трафик на свой продукт</div><div class="label-text">Когда витрина твоя, повторные оплаты остаются у тебя. Второй слой — бот‑хаб с нейросетями и Stars.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-15.jpg" alt="Переход в заявку" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Переход в заявку</div><div class="label-text">Ролик даёт повод, личка закрывает действие. Дальше важна скорость и структура ответа.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-16.jpg" alt="Усиление точечной рекламой" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Усиление точечной рекламой</div><div class="label-text">Реклама полезна как ускоритель, когда серия и конверсия уже стабильны, а не как костыль.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-17.jpg" alt="Стоп‑лист ошибок" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Стоп‑лист ошибок</div><div class="label-text">Разнобой тем, слабый старт, редкие публикации, отсутствие шага — это быстро убивает серию.</div></figcaption>
-          </figure>
-          <figure class="shot" data-reveal>
-            <img src="assets/img/ai-18.jpg" alt="Производство, а не вдохновение" loading="lazy" />
-            <figcaption class="label"><div class="label-title">Производство, а не вдохновение</div><div class="label-text">Контент как выпуск продукта: регулярно, с цифрами и улучшениями. Так входящие становятся ежедневными.</div></figcaption>
-          </figure>
+        <div class="grid3" data-reveal>
+          <article class="card">
+            <h3>Серия вместо разовых залётов</h3>
+            <p>Единый формат + вариации крючков и эмоций. Алгоритм быстрее начинает раздавать серию как продукт.</p>
+            <div class="card__meta">
+              <span class="chip">сохранения</span>
+              <span class="chip">досмотры</span>
+              <span class="chip">повторные просмотры</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Путь зрителя до заявки</h3>
+            <p>Хук → досмотр → профиль → личные сообщения. Дальше работает короткий сценарий ответа, который двигает человека к решению.</p>
+            <div class="card__meta">
+              <span class="chip">входящие</span>
+              <span class="chip">конверсия</span>
+              <span class="chip">повтор</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Конвейер, а не вдохновение</h3>
+            <p>Идея → преобразование → результат → публикация серией → усиление удачного по метрикам. Около 10 минут на ролик без автосборки.</p>
+            <div class="card__meta">
+              <span class="chip">регулярность</span>
+              <span class="chip">контроль качества</span>
+              <span class="chip">масштаб</span>
+            </div>
+          </article>
         </div>
       </div>
-
-
     </section>
 
-    <section class="cta" id="final">
-      <div class="container cta-inner">
-        <h2>Дальше — две статьи и личка</h2>
-        <p class="cta-text">
-          Я вынес всё подробное в статьи: цифры, примеры роликов, логика серии, воронка и как из просмотров собрать заявки.
-          Для быстрых вопросов и партнёрских разговоров удобнее всего писать напрямую.
-        </p>
-        <div class="cta-actions">
-          <a class="btn primary" href="https://telegra.ph/Kak-ya-za-60-dnej-sdelal-21-000-podpischikov-i-zapustil-konvejer-millionnyh-AI-Reels-02-06" target="_blank" rel="noreferrer">Статья про бесплатный трафик</a>
-          <a class="btn" href="https://telegra.ph/Dlya-teh-kto-uzhe-lyot-trafik-na-Syntx-02-10" target="_blank" rel="noreferrer">Статья про свой продукт</a>
-          <a class="btn" href="https://t.me/ferixdiii" target="_blank" rel="noreferrer">Личные сообщения</a>
+    <section class="section section--tight" id="frames">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <div class="eyebrow">Визуальная история</div>
+          <h2>Короткая история в 18 кадрах</h2>
+          <p>
+            Каждый кадр — один принцип из механики. Визуал показывает ситуацию, подпись фиксирует вывод.
+          </p>
+        </div>
+
+        <div class="framesGrid" data-reveal aria-label="Галерея 18 кадров">
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-01.jpg" alt="Серия вместо разовых залётов" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Серия вместо разовых залётов</h3>
+              <p>Один формат, меняя крючки и эмоции, даёт алгоритму понятный сигнал и делает органику предсказуемой.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-02.jpg" alt="Путь зрителя до личных сообщений" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Путь зрителя до личных сообщений</h3>
+              <p>Хук → досмотр → профиль → диалог. Ролик цепляет, профиль усиливает доверие, личка закрывает шаг.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-03.jpg" alt="Конвейер выпуска" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Конвейер выпуска</h3>
+              <p>Идея → преобразование → результат → публикация серией. Рост идёт по цифрам, а не по вдохновению.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-04.jpg" alt="Хук в первые секунды" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Хук в первые секунды</h3>
+              <p>Первые 2–3 секунды решают досмотр. Один сильный триггер повышает удержание и шанс на раздачу.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-05.jpg" alt="Сценарий вместо хаоса" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Сценарий вместо хаоса</h3>
+              <p>Короткий шаблон держит темп и экономит голову, когда делаешь поток роликов каждый день.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-06.jpg" alt="Метрики управляют ростом" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Метрики управляют ростом</h3>
+              <p>Удержание, сохранения, переходы в профиль, доля диалогов — по ним видно, что усиливать дальше.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-07.jpg" alt="Алгоритм любит последовательность" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Алгоритм любит последовательность</h3>
+              <p>Серия выглядит как продукт: одна тема, один стиль, разные ситуации — платформа раздаёт охотнее.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-08.jpg" alt="Профиль как витрина доверия" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Профиль как витрина доверия</h3>
+              <p>Люди пишут чаще, когда оффер понятен за секунды и в закрепах есть доказательства.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-09.jpg" alt="Повторяемость — главный актив" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Повторяемость — главный актив</h3>
+              <p>Один ролик шумит. Серия даёт стабильные входящие и накапливает эффект на дистанции.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-10.jpg" alt="Вариации крючков" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Вариации крючков</h3>
+              <p>Меняя первые секунды и угол подачи, оставаясь в теме, повышаешь вероятность вирусности.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-11.jpg" alt="Качество серии" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Качество серии</h3>
+              <p>Чек‑лист по ролику держит уровень и убирает провалы, когда контент идёт потоком.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-12.jpg" alt="Диалог без лишней болтовни" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Диалог без лишней болтовни</h3>
+              <p>Быстрый ответ и понятный следующий шаг повышают конверсию из интереса в контакт.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-13.jpg" alt="Оффер в одном предложении" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Оффер в одном предложении</h3>
+              <p>Чёткая формулировка снижает трение: зритель понимает, зачем писать, за пару секунд.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-14.jpg" alt="Трафик на свой продукт" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Трафик на свой продукт</h3>
+              <p>Когда витрина твоя, повторные оплаты остаются у тебя. Второй слой — бот‑хаб с нейросетями и Stars.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-15.jpg" alt="Переход в заявку" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Переход в заявку</h3>
+              <p>Ролик даёт повод, личка превращает интерес в действие. Важны скорость и структура ответа.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-16.jpg" alt="Точечная реклама как ускоритель" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Точечная реклама как ускоритель</h3>
+              <p>Реклама усиливает, когда серия и конверсия уже стабильны — так рост становится управляемым.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-17.jpg" alt="Стоп‑лист ошибок" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Стоп‑лист ошибок</h3>
+              <p>Разнобой тем, слабый старт, редкие публикации, отсутствие шага — это быстро убивает серию.</p>
+            </div>
+          </div>
+
+          <div class="framecard">
+            <div class="framecard__img">
+              <img src="assets/img/ai-18.jpg" alt="Производство, а не вдохновение" loading="lazy" />
+            </div>
+            <div class="framecard__meta">
+              <h3>Производство, а не вдохновение</h3>
+              <p>Контент как выпуск продукта: регулярно, с улучшениями по метрикам — входящие становятся постоянными.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="bot">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <div class="eyebrow">Продукт №2</div>
+          <h2>Бот с зарубежными нейросетями под ключ</h2>
+          <p>
+            Когда трафик пошёл, нужен продукт, который собирает повторные оплаты.
+            Я упаковал витрину в Telegram, чтобы человеку было удобно возвращаться за контентом.
+          </p>
+        </div>
+
+        <div class="grid2" data-reveal>
+          <article class="card card--big">
+            <h3>Что внутри</h3>
+            <ul class="list">
+              <li>единая витрина моделей фото/видео в одном интерфейсе</li>
+              <li>оплата в Telegram Stars, сценарии пополнения и списаний</li>
+              <li>лимиты, защита от спама, понятные статусы генераций</li>
+              <li>логика под контент‑поток из Reels, Shorts, Threads</li>
+            </ul>
+            <div class="card__note">Технические детали и логика продукта раскрыты в статье №2.</div>
+          </article>
+
+          <article class="card card--big">
+            <h3>Зачем это после схемы</h3>
+            <ul class="list">
+              <li>органика даёт входящих, продукт удерживает и монетизирует</li>
+              <li>платёжный слой в Telegram снижает трение</li>
+              <li>люди покупают удобство, когда всё в одном месте</li>
+              <li>продукт легко масштабируется под разные аудитории</li>
+            </ul>
+            <div class="card__meta">
+              <span class="chip">повторные оплаты</span>
+              <span class="chip">удержание</span>
+              <span class="chip">простая витрина</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="faq" data-reveal>
+          <div class="faq__head">
+            <h3>Частые вопросы</h3>
+            <p>Коротко и по делу, чтобы не раздувать страницу.</p>
+          </div>
+          <div class="faq__grid">
+            <details class="qa">
+              <summary>Это подходит, когда трафик пока маленький</summary>
+              <div class="qa__a">Да. Схема строится как серия и растит органику. Бот добавляет смысл трафику, потому что появляется продукт и понятный следующий шаг.</div>
+            </details>
+            <details class="qa">
+              <summary>Где смотреть подробности и примеры</summary>
+              <div class="qa__a">Две статьи внизу страницы. Первая — про цифры и механику, вторая — про переход с «чужой витрины» на свой продукт.</div>
+            </details>
+            <details class="qa">
+              <summary>Как происходит контакт</summary>
+              <div class="qa__a">Проще всего — написать в личные сообщения. Я отвечу и скину точки входа, которые подходят под вашу аудиторию.</div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cta" id="contacts">
+      <div class="container">
+        <div class="cta" data-reveal>
+          <div class="cta__copy">
+            <div class="eyebrow">Дальше по ссылкам</div>
+            <h2>Статьи + личные сообщения</h2>
+            <p>
+              В статьях — цифры, примеры, логика серии и воронка.
+              В личке — быстрые вопросы и партнёрские разговоры.
+            </p>
+            <div class="cta__actions">
+              <a class="btn btn--primary" href="https://telegra.ph/Kak-ya-za-60-dnej-sdelal-21-000-podpischikov-i-zapustil-konvejer-millionnyh-AI-Reels-02-06" target="_blank" rel="noreferrer">Статья про бесплатный трафик</a>
+              <a class="btn" href="https://telegra.ph/Dlya-teh-kto-uzhe-lyot-trafik-na-Syntx-02-10" target="_blank" rel="noreferrer">Статья про свой продукт</a>
+              <a class="btn btn--ghost" href="https://t.me/ferixdiii" target="_blank" rel="noreferrer">Перейти в Telegram</a>
+            </div>
+          </div>
+          <div class="cta__side" aria-hidden="true">
+            <div class="cta__stat">
+              <div class="cta__statV">21&nbsp;000+</div>
+              <div class="cta__statK">подписчиков органикой</div>
+            </div>
+            <div class="cta__stat">
+              <div class="cta__statV">20&nbsp;806&nbsp;710</div>
+              <div class="cta__statK">просмотров за 30 дней</div>
+            </div>
+            <div class="cta__stat">
+              <div class="cta__statV">~10</div>
+              <div class="cta__statK">минут на ролик</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <div class="brand">FERIXDI</div>
-        <div class="muted">AI‑Reels → бесплатный трафик → продукт</div>
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__brand">FERIXDI</div>
+        <div class="footer__muted">AI‑видео → органика → продукт</div>
       </div>
-      <div class="footer-actions">
-        <a class="btn small" href="https://telegra.ph/Kak-ya-za-60-dnej-sdelal-21-000-podpischikov-i-zapustil-konvejer-millionnyh-AI-Reels-02-06" target="_blank" rel="noreferrer">Бесплатный трафик</a>
-        <a class="btn small" href="https://telegra.ph/Dlya-teh-kto-uzhe-lyot-trafik-na-Syntx-02-10" target="_blank" rel="noreferrer">Свой продукт</a>
-        <a class="btn small" href="https://t.me/ferixdiii" target="_blank" rel="noreferrer">Личка</a>
+      <div class="footer__right">
+        <a class="footer__link" href="#traffic">Схема</a>
+        <a class="footer__link" href="#bot">Бот</a>
+        <a class="footer__link" href="#frames">18 кадров</a>
+        <a class="footer__link" href="https://t.me/ferixdiii" target="_blank" rel="noreferrer">Telegram</a>
       </div>
     </div>
   </footer>
+
+  <div class="sticky" data-sticky>
+    <div class="sticky__inner">
+      <div class="sticky__text">
+        <span class="sticky__pill">FERIXDI</span>
+        <span class="sticky__desc">Схема AI‑видео + бот под ключ</span>
+      </div>
+      <div class="sticky__actions">
+        <a class="sbtn" href="https://telegra.ph/Kak-ya-za-60-dnej-sdelal-21-000-podpischikov-i-zapustil-konvejer-millionnyh-AI-Reels-02-06" target="_blank" rel="noreferrer">Статья</a>
+        <a class="sbtn sbtn--primary" href="https://t.me/ferixdiii" target="_blank" rel="noreferrer">Контакт</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
