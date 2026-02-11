@@ -1,3 +1,4 @@
+/* __HAS_MASONRY_GUARD__ */
 (() => {
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();

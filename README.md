@@ -1,18 +1,22 @@
-# FERIXDI Landing (GitHub + Cloudflare Pages)
+# FERIXDI Landing (Long-form)
 
-Это статический сайт без сборки: HTML + CSS + JS.
+Это статичный сайт (HTML/CSS/JS) в формате **длинной ленты**: картинка → текст → картинка → текст.
 
-## Быстрый старт (Cloudflare Pages)
-1) В Cloudflare: Workers & Pages → Pages → Create a project → Connect to GitHub  
-2) Выбери репозиторий (например `ferixdi-png/landing`)
-3) Настройки:
-- Framework preset: **None**
-- Build command: *(пусто)*
-- Output directory: *(пусто)*
-4) Deploy
+## Быстрый старт локально
+Открой `index.html` двойным кликом.
+
+## GitHub Pages
+1. Репозиторий → Settings → Pages
+2. Source: **Deploy from a branch**
+3. Branch: **main** / root
+4. Подожди 1–2 минуты — появится ссылка на сайт.
+
+## Cloudflare Pages
+1. Workers & Pages → Pages → Create
+2. Connect to GitHub → выбрать репозиторий
+3. Framework: **None**
+4. Build command: пусто
+5. Output directory: `/`
 
 ## Где менять ссылки
-- `index.html` → кнопки на Telegra.ph и Telegram
-
-## Картинки
-- `assets/img/ai-01.jpg ... ai-18.jpg` — подставлены из того, что было в чате.
+В `index.html` найди `https://telegra.ph/` и поставь свою ссылку.
