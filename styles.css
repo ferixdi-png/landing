@@ -205,33 +205,24 @@ body{
   font-weight:800;
   font-size: 12px;
 }
-.card3d-media{
-  padding:12px;
-  border-radius:28px;
-  background: rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.10);
-  display:flex;
-  flex-direction:column;
-}
-
+.card3d-media{position:relative}
 .card3d-media img{
   width:100%;
-  height:auto;
+  height: auto;
+  object-fit: contain;
   display:block;
-  object-fit:contain;
-  border-radius:24px;
+  filter: contrast(1.02) saturate(1.02);
 }
 .caption{
-  position:static;
-  transform:none;
-  left:auto; right:auto; bottom:auto;
-  margin-top:12px;
-  padding:14px 16px;
-  border-radius:16px;
-  background: rgba(0,0,0,.35);
+  position: static;
+  margin: 12px 14px 14px;
+  padding: 12px 12px;
+  border-radius: 18px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.38);
   backdrop-filter: blur(10px);
-  font-weight:800;
-  letter-spacing:.2px;
+  font-weight:850;
+  line-height:1.25;
 }
 
 .floating{
@@ -332,17 +323,15 @@ body{
 .shot.ready{opacity:1; transform: translateY(0)}
 .shot img{width:100%; display:block}
 .shot .label{
-  position:static;
-  transform:none;
-  margin:12px 12px 14px;
-  padding:12px 14px;
-  border-radius:16px;
-  background: rgba(0,0,0,.35);
+  position:absolute; left:10px; right:10px; bottom:10px;
+  padding: 10px 10px;
+  border-radius: 16px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.38);
   backdrop-filter: blur(10px);
-  font-weight:800;
-  line-height:1.15;
+  font-weight:900;
+  line-height:1.22;
 }
-
 
 /* CTA */
 .section.cta{padding-bottom: 22px}
@@ -406,13 +395,7 @@ body{
 @media (max-width: 980px){
   .hero{grid-template-columns: 1fr; padding-top: 28px}
   .stack{height:auto}
-  .card3d-media img{
-  width:100%;
-  height:auto;
-  display:block;
-  object-fit:contain;
-  border-radius:24px;
-}
+  .card3d-media img{height: 360px}
   .floating{position:static; flex-direction:row; margin-top: 12px; justify-content:space-between}
   .float-item{width:auto; flex:1}
   .section-head{grid-template-columns: 1fr}
@@ -488,9 +471,3 @@ body{
   .story--flip .story__media, .story--flip .story__content { order: initial; }
   .nav { display: none; }
 }
-
-@media (max-width: 720px){
-  .float-cta{display:none;}
-  .floating{display:none;}
-}
-
