@@ -471,3 +471,59 @@ body{
   .story--flip .story__media, .story--flip .story__content { order: initial; }
   .nav { display: none; }
 }
+
+/* Story blocks (ai_sheet order) */
+.story{display:flex;flex-direction:column;gap:28px;padding:28px 0}
+.story-block{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:14px;
+  align-items:start;
+}
+.story-text{padding:0 18px}
+.story-text .eyebrow{
+  opacity:.7;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:12px;
+  margin-bottom:8px;
+}
+.story-text h2{
+  margin:0 0 10px;
+  font-size:28px;
+  line-height:1.05;
+}
+.story-text p{
+  margin:0;
+  max-width:72ch;
+  opacity:.88;
+  font-size:16px;
+  line-height:1.55;
+}
+.story-media{margin:0;padding:0 18px}
+.story-media img{
+  width:100%;
+  height:auto;
+  border-radius:22px;
+  display:block;
+  box-shadow:0 18px 60px rgba(0,0,0,.45);
+  background:rgba(255,255,255,.04);
+}
+@media (min-width: 980px){
+  .story-block{grid-template-columns: 0.9fr 1.1fr;gap:24px}
+  .story-media{padding:0 18px 0 0}
+  .story-text{padding:0 0 0 18px}
+  .story-block:nth-child(even){grid-template-columns: 1.1fr 0.9fr}
+  .story-block:nth-child(even) .story-text{order:2;padding:0 18px 0 0}
+  .story-block:nth-child(even) .story-media{order:1;padding:0 0 0 18px}
+}
+.cta{padding:48px 0}
+.cta__inner{
+  margin:0 auto;
+  max-width:1080px;
+  padding:0 18px;
+}
+.cta__inner h2{margin:0 0 10px;font-size:34px;line-height:1.05}
+.cta__inner p{margin:0;opacity:.9;font-size:17px;line-height:1.6}
+.footer{padding:28px 0;opacity:.65}
+.footer__inner{max-width:1080px;margin:0 auto;padding:0 18px}
