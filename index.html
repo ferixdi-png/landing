@@ -2,294 +2,315 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0e14" />
   <title>FERIXDI — AI‑Reels трафик → продукт</title>
-  <meta name="description" content="Серийные AI‑Reels как система: бесплатный трафик, стабильные охваты и перевод внимания в личные сообщения и заявки." />
+  <meta name="description" content="VIP‑деревенский уют, сильные UX‑анимации и честная механика: как получать бесплатный трафик из AI‑Reels и монетизировать его через продукт." />
+  <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
 
+<body>
+  <div class="bg-orb"></div>
   <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">FERIXDI</div>
+    <div class="topbar__inner">
+      <div class="brand">
+        <span class="brand__dot"></span>
+        <span class="brand__name">FERIXDI</span>
+      </div>
+      <nav class="nav" aria-label="Ссылки">
+        <a class="navlink" href="https://telegra.ph/Kak-ya-za-60-dnej-sdelal-21-000-podpischikov-i-zapustil-konvejer-millionnyh-AI-Reels-02-06" target="_blank" rel="noopener">Статья №1</a>
+        <a class="navlink" href="https://telegra.ph/Besplatnyj-mini-kurs-Svoj-Telegram-bot-s-50-nejrosetyami-fotovideo-v-rublyah-bez-VPN-i-dollarov-01-16" target="_blank" rel="noopener">Статья №2</a>
+        <a class="navlink" href="https://t.me/ferixdiii" target="_blank" rel="noopener">Личные сообщения</a>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main class="page">
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <div class="pill">AI‑Reels трафик → продукт</div>
+      <div class="hero__inner">
+        <div class="hero__left">
+          <div class="badge">AI‑Reels трафик → продукт</div>
           <h1>История, где просмотры превращаются в действие</h1>
           <p class="lead">
-            Я собрал механику серийных AI‑Reels, чтобы получать бесплатный трафик, держать рост подписчиков и переводить внимание в личные сообщения.
-            Дальше — в заявки на мои проекты.
-            Подробности, цифры и примеры лежат в статьях внизу страницы.
+            Это лендинг‑лента в формате «картинка → вывод». Читая её, человек понимает механику серийных AI‑Reels
+            как продукта: крючок → серия → метрики → директ → заявки. Внутри — те самые принципы, которые дали
+            21&nbsp;000+ подписчиков и 20&nbsp;806&nbsp;710 просмотров за 30 дней на органике.
+            Внизу — две статьи с деталями, цифрами и примерами.
           </p>
-          <div class="hero-metrics">
-            <div class="metric"><div class="metric-num">60 дней</div><div class="metric-label">на запуск системы</div></div>
-            <div class="metric"><div class="metric-num">21 000+</div><div class="metric-label">подписчиков на органике</div></div>
-            <div class="metric"><div class="metric-num">~10 минут</div><div class="metric-label">на один ролик без автосборки</div></div>
+          <div class="hero__meta">
+            <span>~10 минут на ролик</span>
+            <span>0.7 сек — хук</span>
+            <span>Серии → удержание</span>
+          </div>
+        </div>
+        <div class="hero__right">
+          <div class="heroCard">
+            <div class="heroCard__title">Что тут меняется чаще всего</div>
+            <ul class="heroCard__list">
+              <li>Тексты секций и CTA</li>
+              <li>Набор “живых” фото под смысл</li>
+              <li>Анимации и микровзаимодействия</li>
+              <li>Ссылки на Telegra.ph и кнопки</li>
+            </ul>
+            <div class="heroCard__hint">Архив обновлений заливаешь в GitHub — сайт обновляется сам.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="story" id="story">
-      <div class="container">
-        <h2>Короткая история в 18 кадрах</h2>
-        <p class="section-lead">
-          Каждый блок — один принцип. Визуалы собраны в едином стиле, текст — как инструкция к тому, что на фото.
-        </p>
+    <section class="divider" id="story">
+      <div class="divider__inner">
+        <h2>Лента</h2>
+        <p>Формат “картинка → смысл” держит внимание как короткое видео: быстро читается, визуально выглядит премиально и ведёт человека строго по логике воронки.</p>
       </div>
+    </section>
 
-
-      <div class="container story-block">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Бесплатный трафик из AI‑Reels»</h3>
-          <p>Механика держится на серии, а не на одном удачном ролике: тема повторяется, меняются углы и крючки, аудитория привыкает возвращаться. В статье про 60 дней и 21 000+ подписчиков показаны примеры, как это масштабируется и почему органика начинает работать как система.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-01.jpg" alt="Бесплатный трафик из AI‑Reels" loading="lazy" />
-        </div>
+    
+    <section class="story">
+      <div class="story__media">
+        <img src="assets/img/ai-01.jpg" alt="Суть" loading="lazy">
       </div>
-
-
-      <div class="container story-block reverse">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Публикуй сериями»</h3>
-          <p>Серия даёт алгоритму понятный сигнал, а зрителю — привычку смотреть продолжение. Я планирую контент как линейку выпусков: единая тема, одинаковый стиль, разные ситуации — так растёт удержание и качество входящих сообщений.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-02.jpg" alt="Публикуй сериями" loading="lazy" />
-        </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Бесплатный трафик из AI‑Reels</h2>
+        <p>Я собираю контент как систему: опора на серийность, повторяемый формат и понятный путь для зрителя. Один выпуск даёт охват, серия даёт предсказуемость, а предсказуемость превращает просмотры в входящий поток. Производство одного ролика занимает около 10 минут без автоматизации, дальше масштабируется конвейером.</p>
       </div>
+    </section>
+    
 
-
-      <div class="container story-block">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Без серии охваты сдуваются»</h3>
-          <p>Разовые залёты создают иллюзию прогресса, а потом статистика проваливается. Серия стабилизирует охваты и превращает рост в накопительный эффект — каждый новый ролик усиливает прошлые и повышает конверсию в личку.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-03.jpg" alt="Без серии охваты сдуваются" loading="lazy" />
-        </div>
+    <section class="story story--flip">
+      <div class="story__media">
+        <img src="assets/img/ai-02.jpg" alt="Главная метрика" loading="lazy">
       </div>
-
-
-      <div class="container story-block reverse">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Хайп решает. Система кормит»</h3>
-          <p>Хайповая тема помогает стартовать и собрать первую волну внимания. Дальше работает каркас: сценарный шаблон, частота публикаций, понятный оффер и маршрут зрителя — тогда просмотры превращаются в заявки, а не в шум.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-04.jpg" alt="Хайп решает. Система кормит" loading="lazy" />
-        </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Просмотры как актив</h2>
+        <p>Охваты — валюта, но курс держится на удержании. Я делаю ролик так, чтобы у зрителя было три якоря: быстрый старт, понятная середина, закрывающий финал. Когда это повторяется сериями, алгоритм усиливает доставку, а профиль начинает работать как витрина, которая мягко ведёт в личные сообщения и заявки.</p>
       </div>
+    </section>
+    
 
-
-      <div class="container story-block">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Без стратегии трафик мимо»</h3>
-          <p>Просмотры легко потратить впустую, если у зрителя нет следующего шага и смысла писать. Я заранее строю цепочку: зацеп → доверие → причина написать → понятный ответ в личке → следующий шаг.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-05.jpg" alt="Без стратегии трафик мимо" loading="lazy" />
-        </div>
+    <section class="story">
+      <div class="story__media">
+        <img src="assets/img/ai-03.jpg" alt="Конвейер" loading="lazy">
       </div>
-
-
-      <div class="container story-block reverse">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Просмотры без системы не кормят»</h3>
-          <p>Сам факт просмотров ничего не гарантирует: важнее повторяемость и воронка. Я смотрю на метрики как на продуктовую аналитику: удержание, досмотры, сохранения, переходы в профиль и долю диалогов от охватов.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-06.jpg" alt="Просмотры без системы не кормят" loading="lazy" />
-        </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Конвейер, а не удача</h2>
+        <p>Производство одного ролика у меня укладывается примерно в 10 минут ручной работы: идея → подготовка референса → генерация → монтаж → публикация. Ключ — повторяемость и дисциплина: система даёт рост на дистанции, а не разовый «залёт».</p>
       </div>
+    </section>
+    
 
-
-      <div class="container story-block">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Охваты любят серию»</h3>
-          <p>Алгоритму проще продвигать понятную последовательность, чем случайный набор тем. Когда серия выстроена, каждый ролик поднимает вероятность следующего — и база подписчиков растёт без постоянного изобретения всего с нуля.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-07.jpg" alt="Охваты любят серию" loading="lazy" />
-        </div>
+    <section class="story story--flip">
+      <div class="story__media">
+        <img src="assets/img/ai-04.jpg" alt="Контраст" loading="lazy">
       </div>
-
-
-      <div class="container story-block reverse">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Работает серия, а не разовый залёт»</h3>
-          <p>Серия даёт эффект «снежного кома»: люди приходят на один ролик и догоняют остальные. Это повышает время просмотра профиля и укрепляет доверие — потом проще перевести интерес в личное сообщение.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-08.jpg" alt="Работает серия, а не разовый залёт" loading="lazy" />
-        </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Контраст “просто / серьёзно”</h2>
+        <p>Механика повторяемая и прозрачная: берёшь понятный формат, делаешь серию, держишь качество и ритм. При этом результат появляется у тех, кто работает стратегией: тестирует хуки, держит тематику и заранее понимает, куда ведёт зрителя.</p>
       </div>
+    </section>
+    
 
-
-      <div class="container story-block">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Трафик в кайф, если система есть»</h3>
-          <p>Когда процесс описан и повторяем, контент перестаёт выматывать: ты работаешь по схеме, а не на вдохновении. В итоге публикации идут регулярно, а входящие становятся предсказуемыми по качеству и объёму.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-09.jpg" alt="Трафик в кайф, если система есть" loading="lazy" />
-        </div>
+    <section class="story">
+      <div class="story__media">
+        <img src="assets/img/ai-05.jpg" alt="Почему это работает" loading="lazy">
       </div>
-
-
-      <div class="container story-block reverse">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Серия качает сильнее удачи»</h3>
-          <p>Удача даёт всплеск, серия даёт кривую роста. Я закладываю запас тем и вариаций, чтобы стабильно выпускать контент и каждый день увеличивать шансы на вирусность без ставок на один ролик.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-10.jpg" alt="Серия качает сильнее удачи" loading="lazy" />
-        </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Почему это работает</h2>
+        <p>Алгоритм продвигает то, что удерживает внимание. Я строю ролики так, чтобы смысл считывался мгновенно: живые эмоции, понятные действия, реальная атмосфера. Никакой “фантастики” — только фоторепортажный реализм, который цепляет и смотрится дорого.</p>
       </div>
+    </section>
+    
 
-
-      <div class="container story-block">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Система делает залёты стабильными»</h3>
-          <p>Залёты случаются чаще, когда у аккаунта есть «скелет»: повторяемый формат, сильные первые секунды и понятная тема. Тогда даже обычные ролики тянут статистику вверх и создают стабильную базу охватов.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-11.jpg" alt="Система делает залёты стабильными" loading="lazy" />
-        </div>
+    <section class="story story--flip">
+      <div class="story__media">
+        <img src="assets/img/ai-06.jpg" alt="Трафик → продукт" loading="lazy">
       </div>
-
-
-      <div class="container story-block reverse">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Конвейер за 10 минут»</h3>
-          <p>Производство ролика занимает около 10 минут, когда цепочка от идеи до публикации собрана и оттестирована. Я описываю это как конвейер: идея → преобразование → результат → публикация, а подробности и примеры — в статье.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-12.jpg" alt="Конвейер за 10 минут" loading="lazy" />
-        </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Трафик → продукт</h2>
+        <p>Бесплатные просмотры ценны только когда они превращаются в шаг: сообщение, заявка, покупка. Поэтому трафик я сразу веду в Telegram, где человек получает понятный продукт: бот с зарубежными нейросетями, оплатой через Telegram Stars и простым доступом в одном месте.</p>
       </div>
+    </section>
+    
 
-
-      <div class="container story-block">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Повтори механику. Работай по стратегии»</h3>
-          <p>Эта история копируется, если повторять логику, а не чужую картинку: серия, темы, крючки, частота, маршрут зрителя. Стратегия важнее «волшебной кнопки» — результат приходит от дисциплины и корректировок по метрикам.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-13.jpg" alt="Повтори механику. Работай по стратегии" loading="lazy" />
-        </div>
+    <section class="story">
+      <div class="story__media">
+        <img src="assets/img/ai-07.jpg" alt="Формула серии" loading="lazy">
       </div>
-
-
-      <div class="container story-block reverse">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Создаём видео с помощью нейросети»</h3>
-          <p>AI‑видео даёт скорость и вариативность, а твоя задача — упаковка смысла и регулярность. Я использую нейросети как производственный станок, чтобы быстрее тестировать крючки и выпускать серию без ручного монтажа.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-14.jpg" alt="Создаём видео с помощью нейросети" loading="lazy" />
-        </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Формула серии</h2>
+        <p>Серия — это один узнаваемый формат и много поводов. Меняется хук и смысл, а визуальный “скелет” остаётся тем же — из‑за этого зрителю легче узнавать паттерн и досматривать. Чем выше досмотры и возвращаемость, тем стабильнее растут охваты и подписки.</p>
       </div>
+    </section>
+    
 
-
-      <div class="container story-block">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Просмотр → директ → заявка»</h3>
-          <p>Воронка строится вокруг одного действия: зритель пишет, потому что ему понятно, что он получит в ответ. Дальше включается продуктовый сценарий общения: коротко объяснить ценность, уточнить задачу и довести до решения.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-15.jpg" alt="Просмотр → директ → заявка" loading="lazy" />
-        </div>
+    <section class="story story--flip">
+      <div class="story__media">
+        <img src="assets/img/ai-08.jpg" alt="Скорость важнее идеала" loading="lazy">
       </div>
-
-
-      <div class="container story-block reverse">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«С одной рекламы окупаешь стратегию»</h3>
-          <p>Один точечный запуск рекламы можно использовать как усилитель, когда система уже собрана и конверсия предсказуема. В таком режиме реклама работает как ускоритель, а не как костыль — потому что серия и воронка уже тянут органику.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-16.jpg" alt="С одной рекламы окупаешь стратегию" loading="lazy" />
-        </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Скорость важнее идеала</h2>
+        <p>Ролик должен выходить регулярно. Полировка убивает выпуск. Лучше 1 сильная идея и чёткая подача, чем “идеально”, но редко.</p>
       </div>
+    </section>
+    
 
-
-      <div class="container story-block">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Стоп‑лист ошибок»</h3>
-          <p>Быстрее всего растёт тот, кто убирает хаос: разнобой тем, редкие публикации, слабые первые секунды, отсутствие следующего шага. Я держу чек‑лист качества для каждого ролика, чтобы серия оставалась цельной и конвертировала стабильнее.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-17.jpg" alt="Стоп‑лист ошибок" loading="lazy" />
-        </div>
+    <section class="story">
+      <div class="story__media">
+        <img src="assets/img/ai-09.jpg" alt="UX решает" loading="lazy">
       </div>
-
-
-      <div class="container story-block reverse">
-        <div class="story-text">
-          <div class="kicker">FERIXDI / AI‑REELS</div>
-          <h3>«Конвейер, а не удача»</h3>
-          <p>Финальная точка — привычка выпускать контент как продукт: регулярно, по правилам, с аналитикой и улучшениями. Так строится актив, который приносит входящие ежедневно и позволяет разворачивать решения под аудиторию без ручной суеты.</p>
-        </div>
-        <div class="story-media">
-          <img src="assets/img/ai-18.jpg" alt="Конвейер, а не удача" loading="lazy" />
-        </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>UX решает</h2>
+        <p>Люди покупают ощущение простоты. Поэтому продукт обязан быть упакован как сервис: понятные кнопки, ясные статусы, быстрый результат и предсказуемая оплата.</p>
       </div>
+    </section>
+    
 
+    <section class="story story--flip">
+      <div class="story__media">
+        <img src="assets/img/ai-10.jpg" alt="Почему сайт длинный" loading="lazy">
+      </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Почему сайт длинный</h2>
+        <p>Лента‑статья позволяет провести человека по смыслам как по воронке: сначала боль, потом демонстрация, потом механика, потом CTA. Это конвертит лучше, чем плитки.</p>
+      </div>
+    </section>
+    
 
+    <section class="story">
+      <div class="story__media">
+        <img src="assets/img/ai-11.jpg" alt="Доказуемые факты" loading="lazy">
+      </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Доказуемые факты</h2>
+        <p>Прокачанная страница, миллионные ролики, бесплатный трафик и много развёрнутых рабочих экземпляров системы — это база. На этом и строится доверие.</p>
+      </div>
+    </section>
+    
+
+    <section class="story story--flip">
+      <div class="story__media">
+        <img src="assets/img/ai-12.jpg" alt="Что внутри" loading="lazy">
+      </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Что внутри</h2>
+        <p>Хаб‑сайт ведёт на материалы в Telegra.ph. Там разложены детали и примеры. На сайте — быстрый смысл и визуальный крючок.</p>
+      </div>
+    </section>
+    
+
+    <section class="story">
+      <div class="story__media">
+        <img src="assets/img/ai-13.jpg" alt="Кому зайдёт" loading="lazy">
+      </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Кому зайдёт</h2>
+        <p>Тем, у кого есть аудитория или навыки продакшна, и кто хочет монетизировать внимание продуктом, а не зависеть от чужих площадок и правил.</p>
+      </div>
+    </section>
+    
+
+    <section class="story story--flip">
+      <div class="story__media">
+        <img src="assets/img/ai-14.jpg" alt="Как проверять гипотезы" loading="lazy">
+      </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Как проверять гипотезы</h2>
+        <p>Каждая новая серия — это A/B тест: хук, длительность, эмоция, финальный триггер. Считается просто: удержание, сохранения, переходы в профиль, личные сообщения.</p>
+      </div>
+    </section>
+    
+
+    <section class="story">
+      <div class="story__media">
+        <img src="assets/img/ai-15.jpg" alt="Дальше масштаб" loading="lazy">
+      </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / AI‑Reels</div>
+        <h2>Дальше масштаб</h2>
+        <p>Когда базовый конвейер стабилен, подключаются автоматики: шаблоны, пресеты, пакетная генерация, контент‑план. Тогда одна идея превращается в поток.</p>
+      </div>
+    </section>
+    
+
+    <section class="story story--flip">
+      <div class="story__media">
+        <img src="assets/img/ai-16.jpg" alt="Свой бот вместо чужой витрины" loading="lazy">
+      </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / ПРОДУКТ</div>
+        <h2>Трафик в свой актив, а не в чужую витрину</h2>
+        <p>Если ты уже льёшь на Syntx, главный навык у тебя есть: добывать пользователя и доводить до оплаты. Разница одна — витрина чужая. Я предлагаю коробочный вариант, где актив становится твоим: собственный Telegram‑бот‑хаб с зарубежными нейросетями, оплатой в Telegram Stars и простым доступом в одном месте.</p>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="story__media">
+        <img src="assets/img/ai-17.jpg" alt="Что внутри бот-хаба" loading="lazy">
+      </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / ПРОДУКТ</div>
+        <h2>Что внутри</h2>
+        <p>Под контент‑поток собраны самые ходовые модели и сценарии: фото, видео, ремиксы, апскейл, вариации, стили. Пользователь заходит и закрывает задачу без прыжков между сервисами. Запуск быстрый: кастома «под вас» в продаже нет — поэтому цена держится адекватной, а развёртывание занимает часы, а не недели.</p>
+      </div>
+    </section>
+
+    <section class="story story--flip">
+      <div class="story__media">
+        <img src="assets/img/ai-18.jpg" alt="Монетизация и стабильность" loading="lazy">
+      </div>
+      <div class="story__content">
+        <div class="kicker">FERIXDI / ПРОДУКТ</div>
+        <h2>Монетизация, которая выглядит естественно</h2>
+        <p>Воронка простая: 5 бесплатных генераций в день → человек пробует качество → возвращается → дальше платные идут из удобства. Повторные оплаты появляются спокойно, без «дожима», потому что контент нужен постоянно. Stars поддерживает много стран, поэтому масштабирование шире СНГ выглядит реально. UX и модели я обновляю постоянно — партнёр получает апдейты по мере выхода, без жизни в разработке.</p>
+      </div>
     </section>
 
     <section class="cta" id="final">
-      <div class="container cta-inner">
+      <div class="cta__inner">
         <h2>Дальше — две статьи и личка</h2>
-        <p class="cta-text">
-          Я вынес всё подробное в статьи: цифры, примеры роликов, логика серии, воронка и как из просмотров собрать заявки.
-          Для быстрых вопросов и партнёрских разговоров удобнее всего писать напрямую.
-        </p>
-        <div class="cta-actions">
-          <a class="btn primary" href="#">Статья №1 про 60 дней и 21 000+</a>
-          <a class="btn" href="#">Статья №2 про воронку и конверсию</a>
+        <p class="muted">В статьях — цифры, скрины, логика серий, стоп‑лист ошибок и то, как из просмотров собирать заявки. Для быстрых вопросов и партнёрских разговоров удобнее всего писать напрямую.</p>
+        <div class="cta__actions">
+          <a class="btn btn--primary" href="https://telegra.ph/Kak-ya-za-60-dnej-sdelal-21-000-podpischikov-i-zapustil-konvejer-millionnyh-AI-Reels-02-06" target="_blank" rel="noopener">Статья №1 про 60 дней и 21 000+</a>
+          <a class="btn" href="https://telegra.ph/Besplatnyj-mini-kurs-Svoj-Telegram-bot-s-50-nejrosetyami-fotovideo-v-rublyah-bez-VPN-i-dollarov-01-16" target="_blank" rel="noopener">Статья №2 про бот‑хаб и монетизацию</a>
           <a class="btn" href="https://t.me/ferixdiii" target="_blank" rel="noopener">Личные сообщения</a>
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="brand brand--small">
+            <span class="brand__dot"></span>
+            <span class="brand__name">FERIXDI</span>
+          </div>
+          <div class="muted">Сайт‑хаб под AI‑Reels воронку. Обновления — архивом в репозиторий.</div>
+        </div>
+        <div class="footer__right">
+          <a class="link" href="https://telegra.ph/Kak-ya-za-60-dnej-sdelal-21-000-podpischikov-i-zapustil-konvejer-millionnyh-AI-Reels-02-06" target="_blank" rel="noopener">Бесплатный трафик — кейс</a>
+          <a class="link" href="https://telegra.ph/Besplatnyj-mini-kurs-Svoj-Telegram-bot-s-50-nejrosetyami-fotovideo-v-rublyah-bez-VPN-i-dollarov-01-16" target="_blank" rel="noopener">Бот под ключ — мини‑курс</a>
+          <a class="link" href="https://t.me/ferixdiii" target="_blank" rel="noopener">Контакт</a>
+          <a class="link" href="#story">Наверх</a></div>
+      </div>
+    </footer>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <div class="brand">FERIXDI</div>
-        <div class="muted">AI‑Reels → бесплатный трафик → продукт</div>
-      </div>
-      <div class="footer-actions">
-        <a class="btn small" href="#">Статья №1</a>
-        <a class="btn small" href="#">Статья №2</a>
-        <a class="btn small" href="https://t.me/ferixdiii" target="_blank" rel="noopener">Личка</a>
-      </div>
-    </div>
-  </footer>
+  <script src="app.js"></script>
 </body>
 </html>
+
