@@ -25,9 +25,13 @@
   // Segmented switcher (hero)
   const segs = Array.from(document.querySelectorAll('[data-seg]'));
   const panels = Array.from(document.querySelectorAll('[data-panel]'));
+  const medias = Array.from(document.querySelectorAll('[data-media]'));
+  const overlays = Array.from(document.querySelectorAll('[data-overlay]'));
   const setPanel = (name) => {
     segs.forEach((b) => b.classList.toggle('is-active', b.dataset.seg === name));
     panels.forEach((p) => p.classList.toggle('is-active', p.dataset.panel === name));
+    medias.forEach((m) => m.classList.toggle('is-active', m.dataset.media === name));
+    overlays.forEach((o) => o.classList.toggle('is-active', o.dataset.overlay === name));
   };
   segs.forEach((b) => b.addEventListener('click', () => setPanel(b.dataset.seg || 'traffic')));
 
