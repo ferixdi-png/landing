@@ -527,3 +527,25 @@ body{
 .cta__inner p{margin:0;opacity:.9;font-size:17px;line-height:1.6}
 .footer{padding:28px 0;opacity:.65}
 .footer__inner{max-width:1080px;margin:0 auto;padding:0 18px}
+
+/* ===== Polished CTA buttons (only at the end) ===== */
+.topbar__inner{justify-content:center}
+
+.cta-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:16px;
+}
+
+.footer-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:flex-end;
+}
+
+@media (max-width: 980px){
+  .footer__inner{flex-direction:column; align-items:flex-start}
+  .footer-actions{justify-content:flex-start}
+}
