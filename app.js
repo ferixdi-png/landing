@@ -177,7 +177,7 @@
   /* Tag hero elements with staggered delays */
   const heroEl = document.querySelector('.hero-copy');
   if (heroEl) {
-    ['.pill', 'h1', '.lead', '.hero-metrics', '.hero-actions', '.product-strip']
+    ['.pill', 'h1', '.lead', '.hero-metrics', '.hero-actions']
       .forEach((sel, i) => {
         const el = heroEl.querySelector(sel);
         if (!el) return;
@@ -188,12 +188,6 @@
 
   /* Metrics pop in */
   document.querySelectorAll('.metric').forEach((el, i) => {
-    el.classList.add('reveal-scale');
-    el.dataset.delay = String(i + 1);
-  });
-
-  /* Product cards */
-  document.querySelectorAll('.product-card').forEach((el, i) => {
     el.classList.add('reveal-scale');
     el.dataset.delay = String(i + 1);
   });
