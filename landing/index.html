@@ -6,9 +6,14 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>FERIXDI — AI‑Reels трафик → продукт</title>
 <meta content="Серийные AI‑Reels как система: бесплатный трафик, стабильные охваты и перевод внимания в личные сообщения и заявки." name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
+<canvas id="bg-canvas"></canvas>
+<div class="noise"></div>
+<div class="glow"></div>
+<div class="glow-2"></div>
 <header class="topbar">
 <div class="container topbar-inner">
 <div class="brand">FERIXDI</div>
@@ -48,6 +53,7 @@
 </div>
 </div>
 </section>
+<hr class="gradient-line">
 <section class="story" id="story">
 <div class="container">
 <h2>Короткая история в 18 кадрах</h2>
@@ -233,14 +239,16 @@
 </div>
 </div>
 </section>
+<hr class="gradient-line">
 <section class="cta" id="final">
-<div class="container cta-inner">
+<div class="container"><div class="cta-inner">
 <h2>Схема бесплатного трафика из AI‑Reels</h2>
 <p class="cta-text">Подробности можно прочитать в статье. Хочешь быстрее — забираешь схему и повторяешь механику под своих персонажей.</p><ul class="bullets"><li>мою базовую схему «делай как я» шаг за шагом</li><li>готовую ветку для текстовой нейросети, чтобы быстро получать нужные заготовки</li><li>понятную структуру, как «перепрошивать» идеи под своих персонажей</li><li>систему, как держать качество стабильно</li><li>систему, как держать экономику 2–4 рубля за результат</li><li>список ошибок, которые убивают охваты</li><li>понятные варианты монетизации: партнёрки, услуги, лиды под проекты</li></ul>
 <div class="cta-actions">
 <a class="btn primary" href="https://telegra.ph/Kak-ya-za-60-dnej-sdelal-21-000-podpischikov-i-zapustil-konvejer-millionnyh-AI-Reels-02-06" rel="noreferrer" target="_blank">Читать статью</a>
 <a class="btn" href="https://t.me/ferixdiii" rel="noreferrer" target="_blank">Купить схему</a>
 <a class="btn" href="https://t.me/ferixdiii" rel="noreferrer" target="_blank">Вопросы и реквизиты</a>
+</div>
 </div>
 </div>
 </section>
@@ -258,5 +266,7 @@
 </div>
 </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="app.js" defer></script>
 </body>
 </html>
