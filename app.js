@@ -27,6 +27,7 @@
     if (typeof THREE === 'undefined') return;
     const canvas = document.getElementById('bg-canvas');
     if (!canvas) return;
+    try {
 
     const W = () => window.innerWidth, H = () => window.innerHeight;
     const isMobile = W() < 768;
@@ -162,12 +163,14 @@
       camera.lookAt(0, 0, 0);
       renderer.render(scene, camera);
     })();
+    } catch (e) { console.warn('3D init failed:', e); }
   }
 
-  /* Boot 3D when Three.js is ready (async loading) */
+  /* Boot 3D when Three.js is ready (async loading, max 5s) */
+  let boot3DAttempts = 0;
   function tryBoot3D() {
     if (typeof THREE !== 'undefined') boot3D();
-    else setTimeout(tryBoot3D, 100);
+    else if (++boot3DAttempts < 50) setTimeout(tryBoot3D, 100);
   }
   if (typeof THREE !== 'undefined') boot3D();
   else if (document.readyState === 'complete') setTimeout(tryBoot3D, 50);
