@@ -645,3 +645,77 @@ body{
 /* Bullets list in CTA */
 .bullets{margin:14px 0 0 18px; padding:0; color:rgba(255,255,255,0.88); line-height:1.45; font-size:14px;}
 .bullets li{margin:6px 0;}
+
+/* =========================================================
+   Rustic "village VIP" background + layout consistency
+   (safe overrides, keeps existing structure)
+   ========================================================= */
+
+body{
+  background:
+    radial-gradient(1100px 700px at 12% 20%, rgba(120,80,40,0.18) 0%, rgba(10,12,18,0.0) 60%),
+    radial-gradient(900px 650px at 88% 42%, rgba(90,60,160,0.18) 0%, rgba(10,12,18,0.0) 58%),
+    linear-gradient(180deg, #0b0d12 0%, #07080c 100%);
+  position: relative;
+}
+
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    repeating-linear-gradient(90deg,
+      rgba(148,105,58,0.055) 0px,
+      rgba(148,105,58,0.055) 22px,
+      rgba(110,78,42,0.045) 22px,
+      rgba(110,78,42,0.045) 48px,
+      rgba(78,55,30,0.035) 48px,
+      rgba(78,55,30,0.035) 76px
+    ),
+    radial-gradient(1100px 700px at 50% 10%, rgba(255,198,120,0.10) 0%, rgba(0,0,0,0) 62%),
+    radial-gradient(900px 700px at 50% 100%, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0) 65%);
+  opacity: 0.95;
+  pointer-events:none;
+}
+
+body::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.06) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.05) 0 1px, transparent 2px),
+    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.04) 0 1px, transparent 2px);
+  background-size: 260px 260px, 320px 320px, 380px 380px;
+  mix-blend-mode: overlay;
+  opacity: 0.20;
+  pointer-events:none;
+}
+
+/* Tighter, steadier typography + section rhythm */
+.section{ padding: 84px 0; }
+.hero{ padding-top: 140px; }
+.hero h1{ letter-spacing: -0.02em; }
+
+/* Ensure cards never overflow on narrow widths */
+.card, .hero, .product-strip, .story-media img{ max-width: 100%; }
+
+/* Reveal micro-animation */
+.reveal{ opacity:0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
+.reveal.in-view{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){
+  .reveal{ transition:none; transform:none; opacity:1; }
+}
+
+/* Hover polish (subtle, no jitter) */
+.card{ will-change: transform; }
+.card:hover{ transform: translateY(-2px); }
+
+/* Product strip: keep stable sizing */
+.product-strip{
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
+
