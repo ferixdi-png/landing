@@ -3,18 +3,18 @@
    Pure CSS animations. No external JS libraries.
    ============================================== */
 :root {
-  --bg: #09090b;
-  --surface: rgba(255,215,0,.04);
-  --surface2: rgba(255,215,0,.07);
-  --border: rgba(255,215,0,.10);
-  --border-hover: rgba(255,215,0,.28);
-  --text: #f5f0e8;
-  --muted: rgba(245,240,232,.60);
-  --muted2: rgba(245,240,232,.42);
-  --accent: #d4a843;
-  --accent-light: #f0d060;
-  --gold: linear-gradient(135deg, #d4a843, #f0d060, #d4a843);
-  --gold-glow: rgba(212,168,67,.20);
+  --bg: #08080a;
+  --surface: rgba(255,200,50,.06);
+  --surface2: rgba(255,200,50,.10);
+  --border: rgba(255,200,50,.14);
+  --border-hover: rgba(255,200,50,.38);
+  --text: #fffaf2;
+  --muted: rgba(255,250,240,.68);
+  --muted2: rgba(255,250,240,.48);
+  --accent: #e8b830;
+  --accent-light: #ffd84a;
+  --gold: linear-gradient(135deg, #e8b830, #ffd84a, #e8b830);
+  --gold-glow: rgba(255,216,74,.25);
   --radius: 18px;
   --ease: cubic-bezier(.22,1,.36,1);
 }
@@ -43,15 +43,15 @@ body {
 .glow {
   position: fixed; pointer-events: none; z-index: 0;
   width: 500px; height: 500px; border-radius: 50%;
-  background: radial-gradient(circle, var(--gold-glow), transparent 70%);
-  filter: blur(60px);
+  background: radial-gradient(circle, var(--gold-glow), transparent 65%);
+  filter: blur(50px);
   top: -10%; left: -8%;
   animation: drift1 20s ease-in-out infinite;
 }
 .glow-2 {
   position: fixed; pointer-events: none; z-index: 0;
   width: 400px; height: 400px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(240,208,96,.12), transparent 70%);
+  background: radial-gradient(circle, rgba(255,216,74,.18), transparent 65%);
   filter: blur(60px);
   bottom: 5%; right: -5%;
   animation: drift2 25s ease-in-out infinite;
@@ -93,7 +93,7 @@ a { text-decoration: none; color: inherit; }
 /* Animated gold gradient brand */
 .brand {
   font-weight: 900; font-size: 18px; letter-spacing: .10em;
-  background: linear-gradient(90deg, #d4a843, #f0d060, #d4a843, #f0d060);
+  background: linear-gradient(90deg, #e8b830, #ffd84a, #e8b830, #ffd84a);
   background-size: 300% 100%;
   -webkit-background-clip: text; background-clip: text; color: transparent;
   animation: brandShine 4s ease-in-out infinite;
@@ -120,24 +120,24 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 4px 20px rgba(212,168,67,.10);
 }
 .topnav__link--primary {
-  background: rgba(212,168,67,.10); border-color: rgba(212,168,67,.30);
+  background: rgba(255,216,74,.12); border-color: rgba(255,216,74,.35);
   color: var(--accent-light);
 }
 .topnav__link--primary:hover {
-  background: rgba(212,168,67,.20); border-color: rgba(212,168,67,.50);
+  background: rgba(255,216,74,.22); border-color: rgba(255,216,74,.55);
 }
 
 /* === Pill badge === */
 .pill {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 10px 20px; border-radius: 999px;
-  border: 1px solid rgba(212,168,67,.28); background: rgba(212,168,67,.08);
+  border: 1px solid rgba(255,216,74,.32); background: rgba(255,216,74,.10);
   color: var(--accent-light); font-weight: 700; font-size: 13px;
 }
 .pill::before {
   content: ''; width: 8px; height: 8px; border-radius: 50%;
   background: var(--accent-light);
-  box-shadow: 0 0 10px var(--accent-light), 0 0 20px rgba(240,208,96,.4);
+  box-shadow: 0 0 12px var(--accent-light), 0 0 24px rgba(255,216,74,.5);
   animation: dotPulse 2s ease-in-out infinite;
 }
 @keyframes dotPulse {
@@ -223,13 +223,13 @@ a { text-decoration: none; color: inherit; }
 .btn:active { transform: translateY(0); }
 
 .btn.primary {
-  background: linear-gradient(135deg, #d4a843, #c49530);
-  border-color: rgba(212,168,67,.6); color: #0a0a0c;
+  background: linear-gradient(135deg, #e8b830, #d4a020);
+  border-color: rgba(255,216,74,.65); color: #0a0a0c;
   font-weight: 800;
-  box-shadow: 0 10px 40px rgba(212,168,67,.20);
+  box-shadow: 0 10px 40px rgba(255,216,74,.25);
 }
 .btn.primary:hover {
-  box-shadow: 0 14px 50px rgba(212,168,67,.35);
+  box-shadow: 0 14px 50px rgba(255,216,74,.40);
   transform: translateY(-3px);
 }
 /* Shimmer sweep on primary */
@@ -259,7 +259,7 @@ a { text-decoration: none; color: inherit; }
 .story-block::after {
   content: ''; position: absolute; bottom: 0; left: 8%; right: 8%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212,168,67,.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,216,74,.22), transparent);
 }
 .story-block:last-child::after { display: none; }
 .story-block.reverse { direction: rtl; }
@@ -303,8 +303,8 @@ a { text-decoration: none; color: inherit; }
 .cta { padding: 72px 0; position: relative; z-index: 2; }
 .cta-inner {
   padding: 44px 38px; border-radius: 22px;
-  border: 1px solid rgba(212,168,67,.15);
-  background: linear-gradient(135deg, rgba(212,168,67,.05), rgba(9,9,11,.8));
+  border: 1px solid rgba(255,216,74,.18);
+  background: linear-gradient(135deg, rgba(255,216,74,.07), rgba(8,8,10,.85));
   box-shadow: 0 24px 70px rgba(0,0,0,.35);
   position: relative; overflow: hidden;
 }
@@ -312,7 +312,7 @@ a { text-decoration: none; color: inherit; }
 .cta-inner::before {
   content: ''; position: absolute; top: -50%; left: 50%; transform: translateX(-50%);
   width: 600px; height: 400px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,168,67,.08), transparent 60%);
+  background: radial-gradient(circle, rgba(255,216,74,.12), transparent 60%);
   pointer-events: none;
 }
 .cta h2 { margin-top: 0; margin-bottom: 14px; position: relative; }
@@ -328,7 +328,7 @@ a { text-decoration: none; color: inherit; }
 /* === Gradient line === */
 .gradient-line {
   height: 1px; border: none; margin: 0;
-  background: linear-gradient(90deg, transparent, rgba(212,168,67,.25), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,216,74,.35), transparent);
   position: relative; z-index: 2;
 }
 
