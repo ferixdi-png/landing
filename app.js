@@ -105,8 +105,8 @@
       lastShrink = shrink;
       topbar.style.transition = 'padding .25s ease, background .25s ease';
       if (shrink) {
-        topbar.style.background = 'rgba(6,8,13,.88)';
-        topbar.style.boxShadow = '0 4px 30px rgba(0,0,0,.3)';
+        topbar.style.background = 'rgba(13,11,8,.92)';
+        topbar.style.boxShadow = '0 4px 30px rgba(0,0,0,.35)';
       } else {
         topbar.style.background = '';
         topbar.style.boxShadow = '';
