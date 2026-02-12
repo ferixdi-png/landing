@@ -31,6 +31,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* === 3D Canvas (Three.js) === */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .70;
+}
+
 /* === Noise grain === */
 .noise {
   position: fixed; inset: 0; pointer-events: none; z-index: 1;
@@ -409,6 +418,7 @@ a { text-decoration: none; color: inherit; }
   .topnav__link { padding: 8px 10px; font-size: 11px; min-height: 40px; }
   .pill { padding: 8px 14px; font-size: 12px; }
   .glow, .glow-2 { display: none; }
+  #bg-canvas { opacity: .35; }
 }
 
 @media (max-width: 360px) {
@@ -421,5 +431,6 @@ a { text-decoration: none; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal-up, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; }
+  #bg-canvas { display: none; }
 }
 
