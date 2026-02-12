@@ -1,11 +1,14 @@
-// FERIXDI — Premium animations: scroll-reveal, stagger, parallax, topbar shrink
+/* ============================================================
+   FERIXDI — Gold Premium Animations
+   No external libraries. Pure vanilla JS.
+   Scroll reveals, topbar shrink, smooth scroll, tilt hover.
+   ============================================================ */
 (function () {
   'use strict';
 
-  /* === Respect reduced motion === */
   const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* === Smooth scroll for anchors === */
+  /* ===================== SMOOTH SCROLL ===================== */
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
@@ -19,94 +22,82 @@
 
   if (prefersReduce) return;
 
-  /* === Tag elements for reveal === */
+  /* ============================================================
+     SCROLL REVEAL ANIMATIONS
+     ============================================================ */
+
+  /* Tag hero elements with staggered delays */
   const heroEl = document.querySelector('.hero-copy');
   if (heroEl) {
-    const pill = heroEl.querySelector('.pill');
-    const h1 = heroEl.querySelector('h1');
-    const lead = heroEl.querySelector('.lead');
-    const actions = heroEl.querySelector('.hero-actions');
-    const muted = heroEl.querySelector('.muted');
-    [pill, h1, lead, actions, muted].forEach((el, i) => {
-      if (!el) return;
-      el.classList.add('reveal-up');
-      el.dataset.delay = String(i + 1);
-    });
+    ['.pill', 'h1', '.lead', '.hero-metrics', '.hero-actions', '.product-strip']
+      .forEach((sel, i) => {
+        const el = heroEl.querySelector(sel);
+        if (!el) return;
+        el.classList.add('reveal-up');
+        el.dataset.delay = String(i + 1);
+      });
   }
 
-  /* Metrics — staggered scale */
+  /* Metrics pop in */
   document.querySelectorAll('.metric').forEach((el, i) => {
     el.classList.add('reveal-scale');
     el.dataset.delay = String(i + 1);
   });
 
-  /* Section heads */
-  document.querySelectorAll('.section-head').forEach(el => el.classList.add('reveal-up'));
+  /* Product cards */
+  document.querySelectorAll('.product-card').forEach((el, i) => {
+    el.classList.add('reveal-scale');
+    el.dataset.delay = String(i + 1);
+  });
 
   /* Story blocks — alternate left/right */
   document.querySelectorAll('.story-block').forEach((block, i) => {
     const media = block.querySelector('.story-media');
-    const copy = block.querySelector('.story-copy');
+    const text = block.querySelector('.story-text');
     if (media) media.classList.add(i % 2 === 0 ? 'reveal-left' : 'reveal-right');
-    if (copy) copy.classList.add(i % 2 === 0 ? 'reveal-right' : 'reveal-left');
+    if (text) text.classList.add(i % 2 === 0 ? 'reveal-right' : 'reveal-left');
   });
 
-  /* CTA */
+  /* CTA + footer */
   const ctaInner = document.querySelector('.cta-inner');
   if (ctaInner) ctaInner.classList.add('reveal-scale');
+  const footerEl = document.querySelector('.footer-inner');
+  if (footerEl) footerEl.classList.add('reveal-up');
 
-  /* Footer */
-  const footer = document.querySelector('.footer-inner');
-  if (footer) footer.classList.add('reveal-up');
+  /* Section headings */
+  document.querySelectorAll('.story > .container > h2').forEach(el => {
+    el.classList.add('reveal-up');
+  });
 
-  /* === IntersectionObserver for reveals === */
-  if (!('IntersectionObserver' in window)) {
-    document.querySelectorAll('.reveal-up,.reveal-left,.reveal-right,.reveal-scale')
-      .forEach(el => el.classList.add('in-view'));
-    return;
-  }
-
-  const io = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        io.unobserve(entry.target);
+  /* IntersectionObserver */
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
       }
-    }
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
 
-  document.querySelectorAll('.reveal-up,.reveal-left,.reveal-right,.reveal-scale')
-    .forEach(el => io.observe(el));
-
-  /* === Parallax glow orbs on scroll === */
-  const glow1 = document.querySelector('.glow');
-  const glow2 = document.querySelector('.glow-2');
-  if (glow1 || glow2) {
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const y = window.scrollY;
-        if (glow1) glow1.style.transform = `translate(${Math.sin(y * 0.002) * 60}px, ${y * 0.08}px)`;
-        if (glow2) glow2.style.transform = `translate(${Math.cos(y * 0.002) * 40}px, ${-y * 0.05}px)`;
-        ticking = false;
-      });
-    }, { passive: true });
+    document.querySelectorAll('[class*="reveal-"]').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('[class*="reveal-"]').forEach(el => el.classList.add('in-view'));
   }
 
-  /* === Topbar shrink on scroll === */
+  /* ============================================================
+     TOPBAR SHRINK ON SCROLL
+     ============================================================ */
   const topbar = document.querySelector('.topbar');
   if (topbar) {
-    let lastShrink = false;
+    let shrunk = false;
     window.addEventListener('scroll', () => {
-      const shrink = window.scrollY > 60;
-      if (shrink === lastShrink) return;
-      lastShrink = shrink;
-      topbar.style.transition = 'padding .25s ease, background .25s ease';
-      if (shrink) {
-        topbar.style.background = 'rgba(13,11,8,.92)';
-        topbar.style.boxShadow = '0 4px 30px rgba(0,0,0,.35)';
+      const s = window.scrollY > 50;
+      if (s === shrunk) return;
+      shrunk = s;
+      if (s) {
+        topbar.style.background = 'rgba(9,9,11,.95)';
+        topbar.style.boxShadow = '0 4px 24px rgba(0,0,0,.5)';
       } else {
         topbar.style.background = '';
         topbar.style.boxShadow = '';
@@ -114,17 +105,25 @@
     }, { passive: true });
   }
 
-  /* === Image tilt on hover (story cards) === */
-  document.querySelectorAll('.story-media').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 4}deg) scale(1.02)`;
+  /* ============================================================
+     TILT ON HOVER — STORY MEDIA (desktop only)
+     ============================================================ */
+  const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+  if (!isTouch) {
+    document.querySelectorAll('.story-media').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform =
+          `perspective(700px) rotateY(${x * 8}deg) rotateX(${-y * 5}deg) translateY(-5px) scale(1.015)`;
+        card.style.transition = 'transform .12s ease-out';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.transition = 'transform .5s cubic-bezier(.22,1,.36,1)';
+      });
     });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
-  });
+  }
 
 })();
