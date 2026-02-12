@@ -2,6 +2,16 @@
    FERIXDI — Gold Premium Landing
    Pure CSS animations. No external JS libraries.
    ============================================== */
+
+/* === Self-hosted Inter (no Google Fonts — blocked in Russia) === */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/Inter-Variable.woff2') format('woff2');
+}
+
 :root {
   --bg: #08080a;
   --surface: rgba(255,200,50,.06);
