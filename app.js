@@ -164,9 +164,14 @@
     })();
   }
 
-  /* Boot 3D when Three.js is ready */
+  /* Boot 3D when Three.js is ready (async loading) */
+  function tryBoot3D() {
+    if (typeof THREE !== 'undefined') boot3D();
+    else setTimeout(tryBoot3D, 100);
+  }
   if (typeof THREE !== 'undefined') boot3D();
-  else window.addEventListener('load', boot3D);
+  else if (document.readyState === 'complete') setTimeout(tryBoot3D, 50);
+  else window.addEventListener('load', tryBoot3D);
 
   if (prefersReduce) return;
 

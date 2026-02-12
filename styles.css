@@ -380,8 +380,9 @@ a { text-decoration: none; color: inherit; }
   .hero { padding: 52px 0 28px; }
   .hero h1 { margin: 14px 0 12px; }
   .lead { font-size: 15px; }
-  .hero-metrics { grid-template-columns: 1fr; }
-  .metric { padding: 16px 14px; }
+  .hero-metrics { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .metric { padding: 14px 12px; }
+  .metric-num { font-size: 22px; }
   .story-block { padding: 22px 0; gap: 12px; }
   .story-text h3 { font-size: 17px; }
   .story-text p { font-size: 14px; }
@@ -393,10 +394,10 @@ a { text-decoration: none; color: inherit; }
   .hero { padding: 40px 0 22px; }
   .hero-actions, .cta-actions, .footer-actions { flex-direction: column; }
   .hero-actions .btn, .cta-actions .btn, .footer-actions .btn { width: 100%; justify-content: center; }
-  .topnav__link { padding: 8px 10px; font-size: 11px; min-height: 40px; }
+  .topnav__link { padding: 8px 10px; font-size: 11px; min-height: 44px; }
   .pill { padding: 8px 14px; font-size: 12px; }
   .glow, .glow-2 { display: none; }
-  #bg-canvas { opacity: .35; }
+  #bg-canvas { display: none; }
 }
 
 @media (max-width: 360px) {
