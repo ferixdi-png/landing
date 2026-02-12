@@ -159,10 +159,6 @@ body{
 .btn.ghost{
   background: rgba(255,255,255,.03);
 }
-.btn.secondary{
-  background: rgba(255,255,255,.06);
-  border-color: rgba(255,255,255,.16);
-}
 
 .hero-metrics{
   margin-top: 18px;
