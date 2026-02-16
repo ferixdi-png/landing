@@ -488,6 +488,21 @@ a { text-decoration: none; color: inherit; }
   main { padding-bottom: 64px; }
 }
 
+.capacity-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px rgba(74, 222, 128, .6);
+  animation: pulse-dot 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px rgba(74, 222, 128, .6); }
+  50% { opacity: .5; box-shadow: 0 0 12px rgba(74, 222, 128, .9); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal-up, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; }
