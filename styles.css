@@ -466,6 +466,28 @@ a { text-decoration: none; color: inherit; }
   .cta-inner { padding: 16px 12px; border-radius: 14px; }
 }
 
+/* Sticky mobile CTA bar */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 10px 16px;
+  background: rgba(10, 10, 12, .92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(232, 184, 48, .15);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, .4);
+}
+.sticky-cta .btn { margin: 0; }
+
+@media (max-width: 768px) {
+  .sticky-cta { display: block; }
+  main { padding-bottom: 64px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal-up, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; }

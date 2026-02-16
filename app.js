@@ -236,6 +236,29 @@
   }
 
   /* ============================================================
+     STICKY MOBILE CTA — show after hero, hide at #final
+     ============================================================ */
+  const stickyCta = document.getElementById('sticky-cta');
+  if (stickyCta) {
+    const heroSection = document.querySelector('.hero');
+    const finalSection = document.getElementById('final');
+    let stickyVisible = false;
+    window.addEventListener('scroll', () => {
+      const heroBottom = heroSection ? heroSection.getBoundingClientRect().bottom : 0;
+      const finalTop = finalSection ? finalSection.getBoundingClientRect().top : Infinity;
+      const shouldShow = heroBottom < 0 && finalTop > window.innerHeight * 0.5;
+      if (shouldShow !== stickyVisible) {
+        stickyVisible = shouldShow;
+        stickyCta.style.transform = shouldShow ? 'translateY(0)' : 'translateY(100%)';
+        stickyCta.style.opacity = shouldShow ? '1' : '0';
+      }
+    }, { passive: true });
+    stickyCta.style.transform = 'translateY(100%)';
+    stickyCta.style.opacity = '0';
+    stickyCta.style.transition = 'transform .3s ease, opacity .3s ease';
+  }
+
+  /* ============================================================
      TOPBAR SHRINK ON SCROLL
      ============================================================ */
   const topbar = document.querySelector('.topbar');
