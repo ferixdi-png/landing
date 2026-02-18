@@ -300,3 +300,27 @@
   }
 
 })();
+
+/* ===================== COPY PAYMENT ===================== */
+function copyPay(btn, value) {
+  navigator.clipboard.writeText(value).then(function () {
+    var icon = btn.querySelector('span:last-child');
+    var orig = icon.textContent;
+    icon.textContent = '✅';
+    icon.style.opacity = '1';
+    btn.style.borderColor = 'rgba(16,185,129,.6)';
+    btn.style.background = 'rgba(16,185,129,.1)';
+    setTimeout(function () {
+      icon.textContent = orig;
+      icon.style.opacity = '';
+      btn.style.borderColor = '';
+      btn.style.background = '';
+    }, 1500);
+  }).catch(function () {
+    var range = document.createRange();
+    range.selectNodeContents(btn.querySelector('span'));
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  });
+}
