@@ -235,6 +235,7 @@
 
   /* Video wraps */
   document.querySelectorAll('.video-wrap').forEach((el, i) => {
+    el.classList.add('reveal-up');
     el.dataset.delay = String(i + 1);
   });
 
@@ -282,9 +283,9 @@
       }
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
 
-    document.querySelectorAll('[class*="reveal-"], .gallery-item, .video-wrap').forEach(el => io.observe(el));
+    document.querySelectorAll('[class*="reveal-"], .gallery-item').forEach(el => io.observe(el));
   } else {
-    document.querySelectorAll('[class*="reveal-"], .gallery-item, .video-wrap').forEach(el => el.classList.add('in-view'));
+    document.querySelectorAll('[class*="reveal-"], .gallery-item').forEach(el => el.classList.add('in-view'));
   }
 
   /* ============================================================

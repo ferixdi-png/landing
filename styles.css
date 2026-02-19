@@ -530,11 +530,11 @@ a { text-decoration: none; color: inherit; }
 .gallery-item.in-view { opacity: 1; transform: none; }
 
 /* === Video wrap reveal === */
-.video-wrap {
+.video-wrap.reveal-up {
   opacity: 0; transform: translateY(24px);
   transition: opacity .6s var(--ease), transform .6s var(--ease);
 }
-.video-wrap.in-view { opacity: 1; transform: none; }
+.video-wrap.reveal-up.in-view { opacity: 1; transform: none; }
 
 /* === Kicker shimmer === */
 .kicker {
