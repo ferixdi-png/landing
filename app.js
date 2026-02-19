@@ -245,6 +245,15 @@
     el.dataset.delay = String(i + 1);
   });
 
+  /* Math section metrics */
+  document.querySelectorAll('#math .metric').forEach((el, i) => {
+    el.classList.add('reveal-scale');
+    el.dataset.delay = String(i + 1);
+  });
+  document.querySelectorAll('#math .cta-inner').forEach(el => {
+    el.classList.add('reveal-up');
+  });
+
   /* Process steps */
   document.querySelectorAll('#process .metric').forEach((el, i) => {
     el.classList.add('reveal-scale');

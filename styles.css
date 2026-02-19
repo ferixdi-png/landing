@@ -455,6 +455,7 @@ a { text-decoration: none; color: inherit; }
 .studio-screens { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
 @media (max-width: 640px) {
   .studio-screens { grid-template-columns: 1fr; }
+  #math .cta-inner > div[style*="grid"] { grid-template-columns: 1fr !important; }
   .container { padding: 0 16px; }
   .hero { padding: 52px 0 28px; }
   .hero h1 { margin: 14px 0 12px; }
