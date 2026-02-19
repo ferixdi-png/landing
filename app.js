@@ -215,8 +215,60 @@
   if (footerEl) footerEl.classList.add('reveal-up');
 
   /* Section headings */
-  document.querySelectorAll('.story > .container > h2').forEach(el => {
+  document.querySelectorAll('.story > .container > h2, .cta h2').forEach(el => {
     el.classList.add('reveal-up');
+  });
+
+  /* Bullet list items — staggered */
+  document.querySelectorAll('.bullets').forEach(list => {
+    list.querySelectorAll('li').forEach((li, i) => {
+      li.classList.add('reveal-up');
+      li.dataset.delay = String(Math.min(i + 1, 12));
+    });
+  });
+
+  /* Gallery images — staggered grid */
+  document.querySelectorAll('#gallery .story-media').forEach((el, i) => {
+    el.classList.add('gallery-item');
+    el.dataset.delay = String((i % 4) + 1);
+  });
+
+  /* Video wraps */
+  document.querySelectorAll('.video-wrap').forEach((el, i) => {
+    el.dataset.delay = String(i + 1);
+  });
+
+  /* Pain metrics */
+  document.querySelectorAll('#pain .metric').forEach((el, i) => {
+    el.classList.add('reveal-scale');
+    el.dataset.delay = String(i + 1);
+  });
+
+  /* Process steps */
+  document.querySelectorAll('#process .metric').forEach((el, i) => {
+    el.classList.add('reveal-scale');
+    el.dataset.delay = String(i + 1);
+  });
+
+  /* Fear/objection blocks */
+  document.querySelectorAll('#fears .cta-inner > p').forEach((el, i) => {
+    el.classList.add('reveal-up');
+    el.dataset.delay = String(Math.min(Math.floor(i / 2) + 1, 8));
+  });
+
+  /* Package section inner */
+  document.querySelectorAll('#package .cta-inner').forEach(el => {
+    el.classList.add('reveal-scale');
+  });
+
+  /* Start (post-purchase) section */
+  document.querySelectorAll('#start .cta-inner').forEach(el => {
+    el.classList.add('reveal-up');
+  });
+
+  /* Final CTA section */
+  document.querySelectorAll('#final .cta-inner').forEach(el => {
+    el.classList.add('reveal-scale');
   });
 
   /* IntersectionObserver */
@@ -230,9 +282,49 @@
       }
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
 
-    document.querySelectorAll('[class*="reveal-"]').forEach(el => io.observe(el));
+    document.querySelectorAll('[class*="reveal-"], .gallery-item, .video-wrap').forEach(el => io.observe(el));
   } else {
-    document.querySelectorAll('[class*="reveal-"]').forEach(el => el.classList.add('in-view'));
+    document.querySelectorAll('[class*="reveal-"], .gallery-item, .video-wrap').forEach(el => el.classList.add('in-view'));
+  }
+
+  /* ============================================================
+     COUNTER ANIMATION — hero metric numbers count up
+     ============================================================ */
+  function animateCounter(el, target, suffix, duration) {
+    const start = performance.now();
+    const isFloat = String(target).includes('.');
+    function tick(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+      const val = eased * target;
+      el.textContent = (isFloat ? val.toFixed(1).replace('.', ',') : Math.round(val).toLocaleString('ru-RU')) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+      else el.classList.add('counted');
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const counterMap = [
+    { text: '3,6', target: 3.6, suffix: ' \u20BD' },
+    { text: '2 мин', target: 2, suffix: ' мин' },
+    { text: '30 000', target: 30000, suffix: '' },
+  ];
+
+  const heroMetrics = document.querySelectorAll('.hero-metrics:first-of-type .metric-num');
+  if (heroMetrics.length >= 3) {
+    const cIO = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const el = entry.target;
+        const idx = Array.from(heroMetrics).indexOf(el);
+        if (idx >= 0 && idx < counterMap.length) {
+          const c = counterMap[idx];
+          animateCounter(el, c.target, c.suffix, 1200 + idx * 200);
+        }
+        cIO.unobserve(el);
+      }
+    }, { threshold: 0.5 });
+    heroMetrics.forEach(el => cIO.observe(el));
   }
 
   /* ============================================================
