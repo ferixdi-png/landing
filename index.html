@@ -11,9 +11,10 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://ferixdi-png.github.io/landing/"/>
 <link rel="canonical" href="https://ferixdi-png.github.io/landing/"/>
-<link href="styles.css?v=b5" rel="stylesheet"/>
+<link href="styles.css?v=b6" rel="stylesheet"/>
 </head>
 <body>
+<div class="scroll-progress" id="scroll-progress"></div>
 <canvas id="bg-canvas"></canvas>
 <div class="noise"></div>
 <div class="glow"></div>
@@ -48,6 +49,7 @@
 <a class="btn primary" href="#final">Забрать систему — 10 000 ₽ разово ↓</a>
 <a class="btn" href="#pain">Покажи, как это работает ↓</a>
 </div>
+<div class="social-proof"><span class="sp-dot"></span><span class="sp-num" id="sp-count">15+</span> человек уже используют систему</div>
 <p class="muted" style="margin-top:12px">Никаких созвонов и менеджеров. Листай — расскажу всё за 5 минут. <a href="https://www.instagram.com/ferixdi.ai/" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(232,184,48,.3)">Проверь цифры в Instagram →</a> · <a href="https://t.me/ferixdi_ai" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(232,184,48,.3)">Канал в Telegram →</a></p>
 </div>
 </div>
@@ -276,32 +278,63 @@
 </section>
 <hr class="gradient-line">
 
-<!-- ═══ SCREEN 7: СТРАХИ ═══ -->
+<!-- ═══ SCREEN 7: СТРАХИ (FAQ accordion) ═══ -->
 <section class="story" id="fears" style="padding:56px 0">
 <div class="container">
 <h2 style="text-align:center;margin-bottom:8px">Частые вопросы</h2>
 <p class="muted" style="text-align:center;max-width:50ch;margin:0 auto 24px">Честные ответы на то, что останавливает перед покупкой.</p>
-<div class="cta-inner" style="margin-bottom:0">
-<p style="color:var(--accent-light);font-weight:700;font-size:15px;position:relative;margin-bottom:6px">«А если не сработает?»</p>
-<p class="cta-text" style="margin-bottom:18px">1–3 ролика в день → стабильная аудитория за 1–3 месяца. Застрял — AI-маркетолог подскажет, 50 разборов ошибок + 104 FAQ внутри.</p>
-<p style="color:var(--accent-light);font-weight:700;font-size:15px;position:relative;margin-bottom:6px">«Я стесняюсь снимать себя на камеру»</p>
-<p class="cta-text" style="margin-bottom:18px">Тебя нет в кадре — ни лица, ни голоса. 200 AI-актёров играют за тебя. Нажал кнопку — ролик готов. Никаких дублей и студий.</p>
-<p style="color:var(--accent-light);font-weight:700;font-size:15px;position:relative;margin-bottom:6px">«Не разбираюсь в нейросетях»</p>
-<p class="cta-text" style="margin-bottom:18px">Не нужно. Пишешь идею на русском → нажимаешь кнопку → получаешь готовый пакет. Или жми «Сюрприз» — Studio придумает за тебя. 14 уроков + AI-помощник + я на связи.</p>
-<p style="color:var(--accent-light);font-weight:700;font-size:15px;position:relative;margin-bottom:6px">«А это правда так просто?»</p>
-<p class="cta-text" style="margin-bottom:18px">Да. Выбрал персонажей → написал идею → нажал кнопку. 10 минут — ролик опубликован. Нужен только браузер.</p>
-<p style="color:var(--accent-light);font-weight:700;font-size:15px;position:relative;margin-bottom:6px">«У меня 0 подписчиков»</p>
-<p class="cta-text" style="margin-bottom:18px">Reels показываются холодной аудитории — подписчики для старта не нужны. Многие начинают с пустого аккаунта.</p>
-<p style="color:var(--accent-light);font-weight:700;font-size:15px;position:relative;margin-bottom:6px">«Какие сервисы/API нужны?»</p>
-<p class="cta-text" style="margin-bottom:18px">Никаких. Всего 2 инструмента: FERIXDI Studio (бесплатно с промо-кодом) + <a href="https://labs.google/fx/tools/flow" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(232,184,48,.3)">Google Flow</a> для генерации видео (~3,6 ₽/ролик). Никаких OpenAI, Midjourney, ElevenLabs и прочих API-ключей. Как купить аккаунт Google Flow и сделать производство максимально дешёвым — пошагово в обучении (14 уроков внутри Studio).</p>
-<p style="color:var(--accent-light);font-weight:700;font-size:15px;position:relative;margin-bottom:6px">«Сколько тратить на ролики?»</p>
-<p class="cta-text" style="margin-bottom:18px">~3,6 ₽ за ролик в Google Flow. Делаешь 5 штук или 20 — платишь только за генерацию. Studio бесплатно. Один клик в таргете стоит 15–50 ₽.</p>
-<p style="color:var(--accent-light);font-weight:700;font-size:15px;position:relative;margin-bottom:6px">«Как быстро окупится?»</p>
-<p class="cta-text" style="margin-bottom:18px">Одна рекламная интеграция при 5K+ подписчиках — от 5 до 30 тыс. ₽. Конвейер стоит 10 000 ₽.</p>
-<p style="color:var(--accent-light);font-weight:700;font-size:15px;position:relative;margin-bottom:6px">«А это подойдёт для моей ниши?»</p>
-<p class="cta-text" style="margin-bottom:18px">Формула универсальная: AI-персонажи + воронка «просмотр → заявка». Меняешь героев и тему — механика та же. Работает в услугах, товарах, инфобизе, фрилансе, блогах, финансах, недвижимости, спорте. AI-маркетолог подберёт пару под нишу за секунду.</p>
-<p style="color:var(--accent-light);font-weight:700;font-size:15px;position:relative;margin-bottom:6px">«Я не из России»</p>
-<p class="cta-text">Зарубежная карта — $130. Крипта USDT — $130. Studio работает из любой точки мира.</p>
+<div class="faq-list">
+
+<div class="faq-item open">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>А если не сработает?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><p>1–3 ролика в день → стабильная аудитория за 1–3 месяца. Застрял — AI-маркетолог подскажет, 50 разборов ошибок + 104 FAQ внутри. <span class="objection-stat">Формула проверена на 30 000 подписчиков</span></p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>Я стесняюсь снимать себя на камеру</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><p>Тебя нет в кадре — ни лица, ни голоса. 200 AI-актёров играют за тебя. Нажал кнопку — ролик готов. Никаких дублей и студий.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>Не разбираюсь в нейросетях</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><p>Не нужно. Пишешь идею на русском → нажимаешь кнопку → получаешь готовый пакет. Или жми «Сюрприз» — Studio придумает за тебя. 14 уроков + AI-помощник + я на связи.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>А это правда так просто?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><p>Да. Выбрал персонажей → написал идею → нажал кнопку. 10 минут — ролик опубликован. Нужен только браузер.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>У меня 0 подписчиков — это проблема?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><p>Нет. Reels показываются холодной аудитории — подписчики для старта не нужны. Многие начинают с пустого аккаунта. <span class="objection-stat">Алгоритм Instagram раздаёт контент бесплатно</span></p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>Какие сервисы и API нужны?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><p>Никаких. Всего 2 инструмента: FERIXDI Studio (бесплатно с промо-кодом) + <a href="https://labs.google/fx/tools/flow" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(232,184,48,.3)">Google Flow</a> для генерации видео (~3,6 ₽/ролик). Никаких OpenAI, Midjourney, ElevenLabs и прочих API. Как купить аккаунт Google Flow дешево — в обучении (14 уроков).</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>Сколько тратить на ролики?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><p>~3,6 ₽ за ролик в Google Flow. Делаешь 5 штук или 20 — платишь только за генерацию. Studio бесплатно. <span class="objection-stat">Один клик в таргете стоит 15–50 ₽</span></p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>Как быстро окупится?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><p>Одна рекламная интеграция при 5K+ подписчиках — от 5 до 30 тыс. ₽. Конвейер стоит 10 000 ₽. <span class="objection-stat">Окупается с первой интеграции</span></p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>Подойдёт для моей ниши?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><p>Формула универсальная: AI-персонажи + воронка «просмотр → заявка». Меняешь героев и тему — механика та же. Работает в услугах, товарах, инфобизе, фрилансе, блогах, финансах, недвижимости, спорте. AI-маркетолог подберёт пару под нишу за секунду.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>Я не из России</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><p>Зарубежная карта — $130. Крипта USDT — $130. Studio работает из любой точки мира.</p></div>
+</div>
+
 </div>
 <div style="text-align:center;padding:16px 0 0">
 <a class="btn primary" href="#final" style="font-size:15px">Забрать систему — 10 000 ₽ разово ↓</a>
@@ -330,6 +363,40 @@
 <div style="text-align:center;padding:8px 0 0">
 <a class="btn primary" href="#final" style="font-size:15px">Забрать систему — 10 000 ₽ разово ↓</a>
 <a class="btn" href="https://www.instagram.com/ferixdi.ai/reels/" target="_blank" rel="noreferrer" style="font-size:14px;margin-top:8px">Смотреть все Reels в Instagram →</a>
+</div>
+</div>
+</section>
+<hr class="gradient-line">
+
+<!-- ═══ КОМУ ПОДОЙДЁТ / КОМУ НЕТ ═══ -->
+<section class="story" id="fit" style="padding:56px 0">
+<div class="container">
+<h2 style="text-align:center;margin-bottom:8px">Кому подойдёт, а кому — нет</h2>
+<p class="muted" style="text-align:center;max-width:52ch;margin:0 auto 24px">Честно — не хочу продавать тем, кому это не нужно.</p>
+<div class="fit-grid">
+<div class="fit-col yes">
+<h4>Подойдёт</h4>
+<ul class="fit-list">
+<li>Есть продукт или услуга — нужен трафик</li>
+<li>Готов публиковать 1–3 ролика в день</li>
+<li>Хочешь бесплатный органический трафик</li>
+<li>Не хочешь сниматься сам — AI сделает за тебя</li>
+<li>Устал от таргета, маркетологов и слитых бюджетов</li>
+<li>Хочешь системный подход, а не случайные «залёты»</li>
+</ul>
+</div>
+<div class="fit-col no">
+<h4>Не подойдёт</h4>
+<ul class="fit-list">
+<li>Ищешь волшебную кнопку без действий</li>
+<li>Не готов публиковать регулярно</li>
+<li>Хочешь результат завтра без усилий</li>
+<li>Нет продукта — только идея «может заработаю»</li>
+</ul>
+</div>
+</div>
+<div style="text-align:center;padding:20px 0 0">
+<a class="btn primary" href="#final" style="font-size:15px">Я готов — забрать систему ↓</a>
 </div>
 </div>
 </section>
@@ -365,11 +432,21 @@
 <span class="capacity-dot"></span>
 <span style="font-size:13px;color:var(--accent);font-weight:600">Набор открыт — ключ выдаю за 10–15 минут после оплаты</span>
 </div>
+
+<div class="guarantee-block">
+<div class="guarantee-icon">🛡️</div>
+<div class="guarantee-text">
+<strong>Гарантия поддержки</strong>
+<span>Я лично на связи. Если что-то непонятно — пишешь мне, и я помогаю разобраться. AI-маркетолог 24/7 + 14 уроков + 50 разборов ошибок + 104 FAQ. Ты не останешься один.</span>
+</div>
+</div>
+
 <p style="color:var(--accent-light);font-weight:700;font-size:15px;margin-top:24px;position:relative">Твой путь после оплаты:</p>
-<div class="hero-metrics" style="margin-top:10px;margin-bottom:20px">
-<div class="metric"><div class="metric-num" style="font-size:16px">День 1</div><div class="metric-label">Схема + ключ. Подбираешь персонажей по гайду, настраиваешь Studio, собираешь первый ролик</div></div>
-<div class="metric"><div class="metric-num" style="font-size:16px">Неделя 1</div><div class="metric-label">3–5 роликов. AI-маркетолог подсказывает, чеклисты контролируют качество</div></div>
-<div class="metric"><div class="metric-num" style="font-size:16px">Месяц 1–3</div><div class="metric-label">Стабильная аудитория, первые заявки, понятная воронка монетизации</div></div>
+<div class="timeline">
+<div class="tl-step"><div class="tl-dot"></div><div class="tl-label">День 1</div><div class="tl-desc">Схема + ключ. Настраиваешь Studio, подбираешь персонажей</div></div>
+<div class="tl-step"><div class="tl-dot"></div><div class="tl-label">Неделя 1</div><div class="tl-desc">3–5 роликов. AI-маркетолог подсказывает, чеклисты контролируют</div></div>
+<div class="tl-step"><div class="tl-dot"></div><div class="tl-label">Месяц 1</div><div class="tl-desc">Первые подписчики. Алгоритм начинает узнавать твой контент</div></div>
+<div class="tl-step"><div class="tl-dot"></div><div class="tl-label">Месяц 2–3</div><div class="tl-desc">Стабильная аудитория, заявки, понятная воронка монетизации</div></div>
 </div>
 <p class="muted" style="margin-top:10px;font-size:12px">Я работаю по этой системе каждый день. Ты подключаешься к тому, что уже работает.</p>
 
@@ -429,6 +506,6 @@
 </div>
 </footer>
 <script src="three.min.js" async></script>
-<script src="app.js?v=3da"></script>
+<script src="app.js?v=3db"></script>
 </body>
 </html>

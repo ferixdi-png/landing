@@ -338,6 +338,42 @@
   }
 
   /* ============================================================
+     SCROLL PROGRESS BAR
+     ============================================================ */
+  const scrollBar = document.getElementById('scroll-progress');
+  if (scrollBar) {
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      scrollBar.style.width = h > 0 ? ((window.scrollY / h) * 100) + '%' : '0%';
+    }, { passive: true });
+  }
+
+  /* ============================================================
+     NEW SECTION REVEALS — fit grid, faq, guarantee, timeline
+     ============================================================ */
+  /* Fit grid columns */
+  document.querySelectorAll('.fit-col').forEach((el, i) => {
+    el.classList.add(i === 0 ? 'reveal-left' : 'reveal-right');
+  });
+
+  /* FAQ items — staggered */
+  document.querySelectorAll('.faq-item').forEach((el, i) => {
+    el.classList.add('reveal-up');
+    el.dataset.delay = String(Math.min(i + 1, 6));
+  });
+
+  /* Guarantee block */
+  document.querySelectorAll('.guarantee-block').forEach(el => {
+    el.classList.add('reveal-scale');
+  });
+
+  /* Timeline steps */
+  document.querySelectorAll('.tl-step').forEach((el, i) => {
+    el.classList.add('reveal-up');
+    el.dataset.delay = String(i + 1);
+  });
+
+  /* ============================================================
      STICKY MOBILE CTA — show after hero, hide at #final
      ============================================================ */
   const stickyCta = document.getElementById('sticky-cta');
