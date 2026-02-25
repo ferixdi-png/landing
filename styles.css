@@ -456,7 +456,9 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 640px) {
   .studio-screens { grid-template-columns: 1fr; }
   #math .cta-inner > div[style*="grid"] { grid-template-columns: 1fr !important; }
+  #money .cta-inner > div[style*="grid"] { grid-template-columns: 1fr !important; }
   #process .cta-inner div[style*="1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  #process .cta-inner div[style*="1fr 1fr"] { grid-template-columns: 1fr !important; }
   .container { padding: 0 16px; }
   .hero { padding: 52px 0 28px; }
   .hero h1 { margin: 14px 0 12px; }

@@ -315,7 +315,7 @@
   }
 
   const counterMap = [
-    { text: '3,6', target: 3.6, suffix: ' \u20BD' },
+    { text: '0', target: 0, suffix: ' \u20BD', static: true },
     { text: '2 мин', target: 2, suffix: ' мин' },
     { text: '30 000', target: 30000, suffix: '' },
   ];
@@ -329,7 +329,8 @@
         const idx = Array.from(heroMetrics).indexOf(el);
         if (idx >= 0 && idx < counterMap.length) {
           const c = counterMap[idx];
-          animateCounter(el, c.target, c.suffix, 1200 + idx * 200);
+          if (c.static) { el.textContent = c.target + c.suffix; el.classList.add('counted'); }
+          else animateCounter(el, c.target, c.suffix, 1200 + idx * 200);
         }
         cIO.unobserve(el);
       }
