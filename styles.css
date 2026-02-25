@@ -457,6 +457,7 @@ a { text-decoration: none; color: inherit; }
   .studio-screens { grid-template-columns: 1fr; }
   #math .cta-inner > div[style*="grid"] { grid-template-columns: 1fr !important; }
   #money .cta-inner > div[style*="grid"] { grid-template-columns: 1fr !important; }
+  #package .cta-inner > div[style*="grid"] { grid-template-columns: 1fr !important; }
   #process .cta-inner div[style*="1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
   #process .cta-inner div[style*="1fr 1fr"] { grid-template-columns: 1fr !important; }
   .container { padding: 0 16px; }
