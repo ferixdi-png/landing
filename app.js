@@ -315,9 +315,9 @@
   }
 
   const counterMap = [
-    { text: '0', target: 0, suffix: ' \u20BD', static: true },
-    { text: '2 мин', target: 2, suffix: ' мин' },
-    { text: '30 000', target: 30000, suffix: '' },
+    { text: '44 млн', target: 44, suffix: ' млн' },
+    { text: '590+', target: 590, suffix: '+' },
+    { text: '32 000+', target: 32000, suffix: '+' },
   ];
 
   const heroMetrics = document.querySelectorAll('.hero-metrics:first-of-type .metric-num');
