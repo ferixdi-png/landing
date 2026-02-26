@@ -445,11 +445,15 @@ a { text-decoration: none; color: inherit; }
   .story-block { padding: 30px 0; gap: 16px; }
   .cta-inner { padding: 28px 20px; }
   .story { padding: 56px 0; }
+  /* Sections with inline padding:56px — start reducing */
+  .story[style*="padding:56px"] { padding: 44px 0 !important; }
   .topbar-inner { flex-wrap: wrap; justify-content: center; min-height: auto; padding: 10px 20px; }
   .topnav { justify-content: center; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
   .glow { width: 320px; height: 320px; }
   .glow-2 { width: 260px; height: 260px; }
+  /* Timeline: 5 steps in 4-col wraps awkwardly — use auto-fit */
+  .timeline { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
 }
 
 .studio-screens { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
@@ -479,6 +483,18 @@ a { text-decoration: none; color: inherit; }
   .bullets { padding-left: 0; font-size: 13px; }
   .topnav__link { padding: 8px 10px; font-size: 11px; }
   .topnav { gap: 4px; }
+  /* Inline section padding — reduce */
+  .story[style*="padding:56px"] { padding: 36px 0 !important; }
+  /* Nested cta-inner boxes — tighter padding on tablet */
+  .cta-inner .cta-inner,
+  .cta-inner [style*="padding:16px"],
+  .cta-inner [style*="padding:18px"] { padding: 14px 12px !important; }
+  /* Gallery: allow smaller cards on tablets */
+  [style*="minmax(280px"] { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important; }
+  /* Big step numbers ①②③ — scale down */
+  .metric-num[style*="font-size:48px"] { font-size: 36px !important; }
+  /* Payment card buttons — full width */
+  .card-num { width: 100% !important; }
 }
 
 @media (max-width: 480px) {
@@ -492,7 +508,7 @@ a { text-decoration: none; color: inherit; }
   .glow, .glow-2 { display: none; }
   #bg-canvas { display: none; }
 
-  /* Hero-metrics → 1 column on phones (pain=6 items, process=3 steps — too cramped in 2 cols) */
+  /* Hero-metrics → 1 column on phones */
   .hero-metrics { grid-template-columns: 1fr !important; gap: 8px; }
   .hero-metrics .metric:nth-child(3) { grid-column: auto; }
 
@@ -501,13 +517,85 @@ a { text-decoration: none; color: inherit; }
   [style*="grid-template-columns: 1fr 1fr"],
   [style*="grid-template-columns:1fr 1fr 1fr"],
   [style*="grid-template-columns: 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+
+  /* === PHONE-SPECIFIC POLISH === */
+
+  /* Inline section padding — compact on phones */
+  .story[style*="padding:56px"] { padding: 28px 0 !important; }
+  .cta { padding: 40px 0; }
+
+  /* Step numbers ①②③ — scale down for phones */
+  .metric-num[style*="font-size:48px"] { font-size: 32px !important; line-height: 1.1 !important; }
+
+  /* Big accent prices — scale down */
+  [style*="font-size:32px"] { font-size: 24px !important; }
+  [style*="font-size:26px"]:not(.metric-num) { font-size: 20px !important; }
+  [style*="font-size:20px"]:not(.metric-num) { font-size: 17px !important; }
+
+  /* Nested cta-inner blocks — phone-tight */
+  .cta-inner { padding: 16px 14px; border-radius: 14px; }
+  .cta-inner [style*="padding:18px"],
+  .cta-inner [style*="padding:20px"],
+  .cta-inner [style*="padding:22px"] { padding: 12px 10px !important; }
+  .cta-inner [style*="margin-bottom:24px"] { margin-bottom: 16px !important; }
+  .cta-inner [style*="margin-top:24px"] { margin-top: 16px !important; }
+  .cta-inner [style*="margin-bottom:20px"] { margin-bottom: 14px !important; }
+
+  /* Bullets — tighter on phones */
+  .bullets li { margin: 7px 0; padding-left: 22px; font-size: 12px; }
+
+  /* Gallery — single column on narrow phones */
+  [style*="minmax(280px"] { grid-template-columns: 1fr !important; }
+
+  /* Metric cards — reduce number sizes for pain section */
+  #pain .metric-num { font-size: 16px !important; }
+
+  /* Lead paragraph — slightly smaller */
+  .lead { font-size: 14px; line-height: 1.6; }
+
+  /* Story section vertical rhythm — less space between blocks */
+  .story > .container + .container { margin-top: 0; }
+
+  /* Better sticky CTA padding */
+  .sticky-cta { padding: 8px 12px; }
+  .sticky-cta .btn { padding: 12px 16px; font-size: 13px; }
+
+  /* h2 margin reductions */
+  h2 { margin-bottom: 6px !important; }
+  .muted[style*="margin:0 auto"] { margin-bottom: 16px !important; }
+
+  /* Payment buttons — full width, readable */
+  .card-num { width: 100% !important; font-size: 13px !important; padding: 10px 12px !important; }
+
+  /* Guarantee block — tighter */
+  .guarantee-block { padding: 14px 12px; gap: 10px; }
+  .guarantee-icon { font-size: 26px; }
+
+  /* Footer — phone layout */
+  .footer { padding: 28px 0; }
+  .footer-actions { width: 100%; }
+  .footer-actions .btn.small { flex: 1; text-align: center; justify-content: center; }
 }
 
 @media (max-width: 360px) {
-  .container { padding: 0 12px; }
-  h1 { font-size: 24px; }
-  .btn { padding: 12px 16px; font-size: 13px; }
-  .cta-inner { padding: 16px 12px; border-radius: 14px; }
+  .container { padding: 0 10px; }
+  h1 { font-size: 22px; }
+  h2 { font-size: 18px !important; }
+  .btn { padding: 11px 14px; font-size: 12px; }
+  .btn.primary { font-size: 13px; }
+  .cta-inner { padding: 14px 10px; border-radius: 12px; }
+  .metric { padding: 10px 8px; }
+  .metric-num { font-size: 18px; }
+  .metric-label { font-size: 11px; }
+  .story-text p { font-size: 13px; }
+  .story-text h3 { font-size: 15px; }
+  .faq-q { font-size: 13px; padding: 12px 14px; }
+  .topnav__link { padding: 6px 8px; font-size: 10px; min-height: 36px; }
+  .pill { font-size: 11px; padding: 6px 12px; }
+  .lead { font-size: 13px; }
+  /* Ultra-narrow: even tighter section spacing */
+  .story[style*="padding:56px"] { padding: 22px 0 !important; }
+  .cta { padding: 28px 0; }
 }
 
 /* Sticky mobile CTA bar */
