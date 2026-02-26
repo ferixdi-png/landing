@@ -491,6 +491,16 @@ a { text-decoration: none; color: inherit; }
   .pill { padding: 8px 14px; font-size: 12px; }
   .glow, .glow-2 { display: none; }
   #bg-canvas { display: none; }
+
+  /* Hero-metrics → 1 column on phones (pain=6 items, process=3 steps — too cramped in 2 cols) */
+  .hero-metrics { grid-template-columns: 1fr !important; gap: 8px; }
+  .hero-metrics .metric:nth-child(3) { grid-column: auto; }
+
+  /* All inline 2/3-column grids → 1 column on phones */
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns:1fr 1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 360px) {
@@ -746,6 +756,7 @@ a { text-decoration: none; color: inherit; }
   .faq-item.open .faq-a { padding: 0 16px 14px; }
   .guarantee-block { flex-direction: column; padding: 18px 16px; gap: 10px; }
   .timeline { grid-template-columns: 1fr 1fr; }
+  .timeline::before { display: none; }
 }
 @media (max-width: 480px) {
   .timeline { grid-template-columns: 1fr; gap: 10px; }
