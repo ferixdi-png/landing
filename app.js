@@ -176,11 +176,10 @@
   else if (document.readyState === 'complete') setTimeout(tryBoot3D, 50);
   else window.addEventListener('load', tryBoot3D);
 
-  if (prefersReduce) return;
-
   /* ============================================================
-     SCROLL REVEAL ANIMATIONS
+     SCROLL REVEAL ANIMATIONS (skip if prefers-reduced-motion)
      ============================================================ */
+  if (!prefersReduce) {
 
   /* Tag hero elements with staggered delays */
   const heroEl = document.querySelector('.hero-copy');
@@ -373,6 +372,8 @@
     el.classList.add('reveal-up');
     el.dataset.delay = String(i + 1);
   });
+
+  } // end if (!prefersReduce)
 
   /* ============================================================
      STICKY MOBILE CTA — show after hero, hide at #final
