@@ -452,8 +452,7 @@ a { text-decoration: none; color: inherit; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
   .glow { width: 320px; height: 320px; }
   .glow-2 { width: 260px; height: 260px; }
-  /* Timeline: 5 steps in 4-col wraps awkwardly — use auto-fit */
-  .timeline { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+  /* Timeline: handled by responsive block below */
 }
 
 .studio-screens { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
@@ -621,7 +620,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* === Counter glow on reveal === */
-.metric-num.counted {
+.metric-num.counted,
+.hero-counter.counted {
   animation: counterGlow .6s ease-out;
 }
 @keyframes counterGlow {
@@ -789,7 +789,7 @@ a { text-decoration: none; color: inherit; }
 
 /* === Result timeline === */
 .timeline {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
   position: relative; z-index: 1; margin-top: 20px;
 }
 .timeline::before {

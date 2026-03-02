@@ -184,7 +184,7 @@
   /* Tag hero elements with staggered delays */
   const heroEl = document.querySelector('.hero-copy');
   if (heroEl) {
-    ['.pill', 'h1', '.lead', '.hero-metrics', '.hero-actions']
+    ['.pill', 'h1', 'h1 + p', 'ul', '#hero-counters', '.hero-actions', '.social-proof']
       .forEach((sel, i) => {
         const el = heroEl.querySelector(sel);
         if (!el) return;
@@ -317,9 +317,10 @@
     { text: '44 млн', target: 44, suffix: ' млн' },
     { text: '590+', target: 590, suffix: '+' },
     { text: '32 000+', target: 32000, suffix: '+' },
+    { text: '~3,6 ₽', target: '~3,6', suffix: ' ₽', static: true },
   ];
 
-  const heroMetrics = document.querySelectorAll('.hero-metrics:first-of-type .metric-num');
+  const heroMetrics = document.querySelectorAll('#hero-counters .hero-counter');
   if (heroMetrics.length >= 3) {
     const cIO = new IntersectionObserver((entries) => {
       for (const entry of entries) {
