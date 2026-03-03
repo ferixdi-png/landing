@@ -470,7 +470,7 @@ function copyPay(btn, value) {
    DEADLINE COUNTDOWN TIMER — 08.08.2025 23:59:59 MSK
    ============================================================ */
 (function () {
-  var DEADLINE = new Date('2025-08-08T23:59:59+03:00').getTime();
+  var DEADLINE = new Date('2026-03-08T23:59:59+03:00').getTime();
   var dEl = document.getElementById('dl-days');
   var hEl = document.getElementById('dl-hours');
   var mEl = document.getElementById('dl-mins');
