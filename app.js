@@ -465,3 +465,42 @@ function copyPay(btn, value) {
     sel.addRange(range);
   });
 }
+
+/* ============================================================
+   DEADLINE COUNTDOWN TIMER — 08.08.2025 23:59:59 MSK
+   ============================================================ */
+(function () {
+  var DEADLINE = new Date('2025-08-08T23:59:59+03:00').getTime();
+  var dEl = document.getElementById('dl-days');
+  var hEl = document.getElementById('dl-hours');
+  var mEl = document.getElementById('dl-mins');
+  var sEl = document.getElementById('dl-secs');
+  var banner = document.getElementById('deadline-banner');
+  if (!dEl || !hEl || !mEl || !sEl || !banner) return;
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function tick() {
+    var now = Date.now();
+    var diff = DEADLINE - now;
+    if (diff <= 0) {
+      banner.classList.add('expired');
+      var badge = banner.querySelector('.deadline-badge');
+      if (badge) badge.textContent = 'НАБОР ЗАКРЫТ';
+      var dateEl = banner.querySelector('.deadline-date');
+      if (dateEl) dateEl.textContent = 'Набор завершён';
+      return;
+    }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    dEl.textContent = pad(d);
+    hEl.textContent = pad(h);
+    mEl.textContent = pad(m);
+    sEl.textContent = pad(s);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();

@@ -852,6 +852,115 @@ a { text-decoration: none; color: inherit; }
   .social-proof { font-size: 12px; padding: 6px 12px; }
 }
 
+/* === Deadline Banner === */
+.deadline-banner {
+  position: relative; z-index: 50;
+  background: linear-gradient(135deg, rgba(232,184,48,.08) 0%, rgba(255,60,60,.06) 50%, rgba(232,184,48,.08) 100%);
+  border-bottom: 1px solid rgba(232,184,48,.25);
+  overflow: hidden;
+}
+.deadline-inner {
+  max-width: 1100px; margin: 0 auto; padding: 18px 24px;
+  position: relative;
+}
+.deadline-pulse {
+  position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(90deg, transparent, rgba(232,184,48,.12), transparent);
+  background-size: 200% 100%;
+  animation: deadlinePulse 3s ease-in-out infinite;
+}
+@keyframes deadlinePulse {
+  0%, 100% { background-position: -100% 0; }
+  50% { background-position: 200% 0; }
+}
+.deadline-content {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  text-align: center;
+}
+.deadline-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 14px; border-radius: 20px;
+  font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  color: #fff; background: linear-gradient(135deg, #e84040, #e8b830);
+  animation: badgePop 2s ease-in-out infinite;
+}
+@keyframes badgePop {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+.deadline-text {
+  font-size: 15px; color: var(--muted); font-weight: 500;
+}
+.deadline-accent {
+  color: var(--accent-light); font-weight: 700;
+}
+.deadline-date {
+  font-size: 20px; font-weight: 800; letter-spacing: -.01em;
+  background: linear-gradient(90deg, #ff6b6b, #ffd84a, #e8b830);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: dateShine 4s ease-in-out infinite;
+}
+@keyframes dateShine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.deadline-timer {
+  display: flex; align-items: center; gap: 6px;
+  margin: 6px 0;
+}
+.timer-block {
+  display: flex; flex-direction: column; align-items: center;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(232,184,48,.2);
+  border-radius: 10px; padding: 8px 12px; min-width: 56px;
+  transition: border-color .3s;
+}
+.timer-block:hover { border-color: rgba(232,184,48,.5); }
+.timer-num {
+  font-size: 26px; font-weight: 900; color: var(--accent-light);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.timer-label {
+  font-size: 10px; color: var(--muted2); font-weight: 600;
+  text-transform: uppercase; letter-spacing: .06em; margin-top: 2px;
+}
+.timer-sep {
+  font-size: 22px; font-weight: 700; color: rgba(232,184,48,.4);
+  animation: sepBlink 1s step-end infinite;
+}
+@keyframes sepBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .2; }
+}
+.deadline-cta {
+  display: inline-block; margin-top: 4px;
+  padding: 8px 24px; border-radius: 10px;
+  font-size: 13px; font-weight: 700; color: #000;
+  background: linear-gradient(135deg, #e8b830, #ffd84a);
+  border: none; cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  text-decoration: none;
+}
+.deadline-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(232,184,48,.35);
+}
+.deadline-banner.expired .deadline-badge { background: linear-gradient(135deg, #666, #888); }
+.deadline-banner.expired .deadline-date { background: none; color: #888; }
+.deadline-banner.expired .deadline-timer { display: none; }
+.deadline-banner.expired .deadline-cta { display: none; }
+
+@media (max-width: 640px) {
+  .deadline-inner { padding: 14px 16px; }
+  .deadline-date { font-size: 17px; }
+  .timer-num { font-size: 20px; }
+  .timer-block { min-width: 46px; padding: 6px 8px; }
+  .timer-sep { font-size: 18px; }
+  .deadline-text { font-size: 13px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal-up, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; }
