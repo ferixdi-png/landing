@@ -504,3 +504,137 @@ function copyPay(btn, value) {
   tick();
   setInterval(tick, 1000);
 })();
+
+/* ============================================================
+   ENHANCED STICKY CTA — inline deadline timer
+   ============================================================ */
+(function () {
+  var DEADLINE = new Date('2026-03-08T23:59:59+03:00').getTime();
+  var el = document.getElementById('sticky-dl-timer');
+  if (!el) return;
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function tickSticky() {
+    var diff = DEADLINE - Date.now();
+    if (diff <= 0) { el.textContent = 'закрыт'; return; }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    el.textContent = d + 'д ' + pad(h) + 'ч ' + pad(m) + 'м';
+  }
+  tickSticky();
+  setInterval(tickSticky, 30000);
+})();
+
+/* ============================================================
+   LIVE ACTIVITY TOASTS — realistic FOMO notifications
+   ============================================================ */
+(function () {
+  var toast = document.getElementById('activity-toast');
+  var textEl = document.getElementById('activity-toast-text');
+  if (!toast || !textEl) return;
+
+  var cities = ['Москвы', 'Питера', 'Казани', 'Краснодара', 'Новосибирска', 'Екатеринбурга', 'Ростова', 'Самары', 'Минска', 'Алматы', 'Тбилиси', 'Ташкента'];
+  var actions = [
+    function (c) { return '<strong>Новый участник</strong> из ' + c + ' получил доступ к системе'; },
+    function (c) { return 'Пользователь из ' + c + ' <strong>только что оплатил</strong> конвейер'; },
+    function (c) { return 'Участник из ' + c + ' <strong>опубликовал первый ролик</strong> через Studio'; },
+    function (c) { return 'Криейтер из ' + c + ' <strong>подключился к системе</strong>'; },
+    function (c) { return '<strong>+1 участник</strong> — ' + c + '. Набор пока открыт'; }
+  ];
+
+  var timeAgo = ['2 мин назад', '5 мин назад', '12 мин назад', '27 мин назад', '1 час назад', '2 часа назад', '3 часа назад'];
+  var shownCount = 0;
+  var maxToasts = 4;
+  var timerId = null;
+
+  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+  function showToast() {
+    if (shownCount >= maxToasts) return;
+    var city = pick(cities);
+    var action = pick(actions);
+    var time = pick(timeAgo);
+    textEl.innerHTML = action(city) + ' · <span style="opacity:.5">' + time + '</span>';
+    toast.classList.add('show');
+    shownCount++;
+    setTimeout(function () {
+      toast.classList.remove('show');
+      if (shownCount < maxToasts) {
+        timerId = setTimeout(showToast, 25000 + Math.random() * 35000);
+      }
+    }, 5000);
+  }
+
+  // First toast after 15-25 seconds of reading
+  timerId = setTimeout(showToast, 15000 + Math.random() * 10000);
+})();
+
+/* ============================================================
+   EXIT-INTENT / IDLE POPUP — shows once
+   ============================================================ */
+(function () {
+  var overlay = document.getElementById('exit-overlay');
+  var closeBtn = document.getElementById('exit-close');
+  var skipBtn = document.getElementById('exit-skip');
+  var ctaBtn = document.getElementById('exit-cta');
+  if (!overlay || !closeBtn || !skipBtn) return;
+
+  var shown = false;
+  var scrolledPast50 = false;
+  var idleTimer = null;
+
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    if (idleTimer) clearTimeout(idleTimer);
+  }
+
+  function hidePopup() {
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', hidePopup);
+  skipBtn.addEventListener('click', hidePopup);
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', function () {
+      hidePopup();
+    });
+  }
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) hidePopup();
+  });
+
+  // Track scroll depth
+  window.addEventListener('scroll', function () {
+    var scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if (scrollPercent > 0.45) scrolledPast50 = true;
+  }, { passive: true });
+
+  // Exit-intent: mouse leaves viewport (desktop only)
+  if (!('ontouchstart' in window)) {
+    document.addEventListener('mouseout', function (e) {
+      if (!scrolledPast50 || shown) return;
+      if (e.clientY <= 5 && e.relatedTarget == null) {
+        showPopup();
+      }
+    });
+  }
+
+  // Idle detection: 45 seconds without interaction after scrolling 45%+
+  function resetIdle() {
+    if (idleTimer) clearTimeout(idleTimer);
+    if (shown || !scrolledPast50) return;
+    idleTimer = setTimeout(showPopup, 45000);
+  }
+  window.addEventListener('scroll', resetIdle, { passive: true });
+  window.addEventListener('mousemove', resetIdle, { passive: true });
+  window.addEventListener('touchstart', resetIdle, { passive: true });
+
+  // Also trigger idle timer on load as fallback
+  setTimeout(function () {
+    if (!shown && scrolledPast50) resetIdle();
+  }, 30000);
+})();
