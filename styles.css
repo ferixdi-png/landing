@@ -1271,6 +1271,124 @@ a { text-decoration: none; color: inherit; }
   .proof-reel__views { font-size: 18px; }
 }
 
+/* === Floating Telegram Button === */
+.float-tg {
+  position: fixed; bottom: 24px; right: 24px; z-index: 9998;
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 22px; border-radius: 50px;
+  background: linear-gradient(135deg, #2AABEE, #1E96D1);
+  color: #fff; font-weight: 800; font-size: 14px;
+  text-decoration: none; border: none; cursor: pointer;
+  box-shadow: 0 6px 28px rgba(42,171,238,.35), 0 2px 8px rgba(0,0,0,.3);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  animation: floatTgPulse 3s ease-in-out infinite;
+}
+.float-tg:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 40px rgba(42,171,238,.45), 0 4px 12px rgba(0,0,0,.3);
+}
+.float-tg svg { width: 22px; height: 22px; flex-shrink: 0; }
+@keyframes floatTgPulse {
+  0%, 100% { box-shadow: 0 6px 28px rgba(42,171,238,.35), 0 2px 8px rgba(0,0,0,.3); }
+  50% { box-shadow: 0 6px 36px rgba(42,171,238,.55), 0 2px 8px rgba(0,0,0,.3); }
+}
+@media (max-width: 640px) {
+  .float-tg { bottom: 80px; right: 16px; padding: 12px 18px; font-size: 13px; }
+  .float-tg__label { display: none; }
+}
+
+/* === Consultation Banner === */
+.consult-banner {
+  padding: 20px 0; text-align: center;
+  background: linear-gradient(90deg, transparent, rgba(42,171,238,.06), transparent);
+  border-top: 1px solid rgba(42,171,238,.12);
+  border-bottom: 1px solid rgba(42,171,238,.12);
+}
+.consult-banner__inner {
+  max-width: 700px; margin: 0 auto; padding: 0 16px;
+  display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;
+}
+.consult-banner__text {
+  font-size: 15px; font-weight: 700; color: var(--accent-light);
+}
+.consult-banner__text strong { color: #5bf5c4; }
+.consult-banner__btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 24px; border-radius: 10px;
+  font-size: 14px; font-weight: 800; color: #fff;
+  background: linear-gradient(135deg, #2AABEE, #1E96D1);
+  border: none; cursor: pointer; text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.consult-banner__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(42,171,238,.3);
+}
+@media (max-width: 640px) {
+  .consult-banner__inner { flex-direction: column; gap: 10px; }
+}
+
+/* === Telegram Channel Subscribe Strip === */
+.tg-subscribe-strip {
+  padding: 28px 0; text-align: center;
+  background: linear-gradient(135deg, rgba(42,171,238,.06), rgba(42,171,238,.02));
+  border: 1px solid rgba(42,171,238,.12);
+  border-radius: 16px;
+  margin: 24px auto; max-width: 720px;
+}
+.tg-subscribe-strip__title {
+  font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 8px;
+}
+.tg-subscribe-strip__sub {
+  font-size: 13px; color: var(--muted); margin-bottom: 16px; max-width: 50ch; margin-left: auto; margin-right: auto; padding: 0 16px;
+}
+.tg-subscribe-strip__btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 32px; border-radius: 12px;
+  font-size: 15px; font-weight: 800; color: #fff;
+  background: linear-gradient(135deg, #2AABEE, #1E96D1);
+  border: none; cursor: pointer; text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.tg-subscribe-strip__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(42,171,238,.35);
+}
+.tg-subscribe-strip__btn svg { width: 20px; height: 20px; }
+.tg-subscribe-strip__note {
+  font-size: 11px; color: var(--muted2); margin-top: 10px;
+}
+
+/* === Enhanced Sticky CTA with Telegram === */
+.sticky-cta-enhanced__tg {
+  flex-shrink: 0; padding: 10px 16px; border-radius: 10px;
+  font-size: 12px; font-weight: 700; color: #fff;
+  background: linear-gradient(135deg, #2AABEE, #1E96D1);
+  border: none; cursor: pointer; text-decoration: none; white-space: nowrap;
+  transition: transform .2s, box-shadow .2s;
+}
+.sticky-cta-enhanced__tg:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(42,171,238,.3);
+}
+@media (max-width: 640px) {
+  .sticky-cta-enhanced__tg { display: none; }
+}
+
+/* === Instagram proof badge === */
+.ig-proof-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px; border-radius: 8px;
+  background: linear-gradient(135deg, rgba(225,48,108,.08), rgba(131,58,180,.06));
+  border: 1px solid rgba(225,48,108,.2);
+  font-size: 13px; font-weight: 700; color: #fff;
+  text-decoration: none; transition: all .2s;
+}
+.ig-proof-badge:hover {
+  border-color: rgba(225,48,108,.4);
+  background: linear-gradient(135deg, rgba(225,48,108,.12), rgba(131,58,180,.08));
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal-up, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; }
