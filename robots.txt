@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /landing/landing/
+Disallow: /_update.py
 
 User-agent: Yandex
 Allow: /

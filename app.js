@@ -280,6 +280,25 @@
     el.classList.add('reveal-scale');
   });
 
+  /* Складчина section */
+  document.querySelectorAll('#skladchina .cta-inner').forEach(el => {
+    el.classList.add('reveal-scale');
+  });
+
+  /* Proof section stats */
+  document.querySelectorAll('.proof-stat').forEach((el, i) => {
+    el.classList.add('reveal-scale');
+    el.dataset.delay = String(Math.min(i + 1, 6));
+  });
+  document.querySelectorAll('.proof-reel').forEach((el, i) => {
+    el.classList.add('reveal-up');
+    el.dataset.delay = String(i + 1);
+  });
+
+  /* SEO text block */
+  const seoText = document.querySelector('.seo-text');
+  if (seoText) seoText.classList.add('reveal-up');
+
   /* IntersectionObserver */
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {

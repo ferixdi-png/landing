@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: ferixdi-landing
+    runtime: static
+    buildCommand: echo "Static site — no build needed"
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600, stale-while-revalidate=86400
+      - path: /fonts/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=604800
+      - path: /*.js
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /*.css
+        name: Cache-Control
+        value: public, max-age=86400
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
