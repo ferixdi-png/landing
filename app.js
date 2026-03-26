@@ -181,17 +181,7 @@
      ============================================================ */
   if (!prefersReduce) {
 
-  /* Tag hero elements with staggered delays */
-  const heroEl = document.querySelector('.hero-copy');
-  if (heroEl) {
-    ['.pill', 'h1', 'h1 + p', 'ul', '#hero-counters', '.hero-actions', '.social-proof']
-      .forEach((sel, i) => {
-        const el = heroEl.querySelector(sel);
-        if (!el) return;
-        el.classList.add('reveal-up');
-        el.dataset.delay = String(i + 1);
-      });
-  }
+  /* Hero uses CSS @keyframes heroFadeUp — no JS reveal needed */
 
   /* Metrics pop in */
   document.querySelectorAll('.metric').forEach((el, i) => {
