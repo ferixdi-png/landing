@@ -2,6 +2,9 @@ User-agent: *
 Allow: /
 Disallow: /landing/landing/
 Disallow: /_update.py
+Disallow: /render.yaml
+Disallow: /three.min.js
+Disallow: /*.py$
 
 User-agent: Yandex
 Allow: /

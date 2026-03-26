@@ -49,11 +49,30 @@
       "brand": {"@type": "Brand", "name": "FERIXDI"},
       "image": "https://landing-kqwl.onrender.com/assets/img/ai-01.jpg",
       "offers": {
-        "@type": "Offer",
-        "price": "9999",
+        "@type": "AggregateOffer",
+        "lowPrice": "1999",
+        "highPrice": "9999",
         "priceCurrency": "RUB",
-        "availability": "https://schema.org/InStock",
-        "url": "https://landing-kqwl.onrender.com/#final"
+        "offerCount": "2",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Складчина Gemini AI ULTRA",
+            "price": "1999",
+            "priceCurrency": "RUB",
+            "availability": "https://schema.org/InStock",
+            "url": "https://landing-kqwl.onrender.com/#skladchina",
+            "priceSpecification": {"@type": "UnitPriceSpecification", "price": "1999", "priceCurrency": "RUB", "billingDuration": {"@type": "QuantitativeValue", "value": "1", "unitCode": "MON"}}
+          },
+          {
+            "@type": "Offer",
+            "name": "Полное обучение AI видео",
+            "price": "9999",
+            "priceCurrency": "RUB",
+            "availability": "https://schema.org/InStock",
+            "url": "https://landing-kqwl.onrender.com/#final"
+          }
+        ]
       }
     },
     {
@@ -64,7 +83,7 @@
         {"@type": "Question", "name": "Не разбираюсь в нейросетях", "acceptedAnswer": {"@type": "Answer", "text": "И не нужно. Это пошаговое обучение — я научу тебя всему с нуля. Ты не пишешь промпты — система генерирует их автоматически. Пишешь идею на русском → нажимаешь кнопку → получаешь готовый пакет. Гайды, база знаний и личная поддержка помогут на каждом этапе."}},
         {"@type": "Question", "name": "А это правда так просто?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Выбрал персонажей → написал идею → нажал кнопку. 5 минут — ролик опубликован. Ролики короткие (8 сек) — генерация быстрая. Нужен только браузер."}},
         {"@type": "Question", "name": "У меня 0 подписчиков — это проблема?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Reels показываются холодной аудитории — подписчики для старта не нужны. Многие начинают с пустого аккаунта. Алгоритм Instagram раздаёт контент бесплатно."}},
-        {"@type": "Question", "name": "Какие сервисы и API нужны?", "acceptedAnswer": {"@type": "Answer", "text": "Никаких. Всего 2 инструмента: FERIXDI Studio + Google Flow для генерации видео. Первый месяц генерации в подарок. Никаких OpenAI, Midjourney, ElevenLabs."}},
+        {"@type": "Question", "name": "Какие сервисы и API нужны?", "acceptedAnswer": {"@type": "Answer", "text": "Никаких. Всего 2 инструмента: FERIXDI Studio (бесплатно с промо-кодом) + Google Flow для генерации видео. Первый месяц генерации в подарок при покупке. Никаких OpenAI, Midjourney, ElevenLabs. Два инструмента — оба в браузере."}},
         {"@type": "Question", "name": "Сколько стоит генерация?", "acceptedAnswer": {"@type": "Answer", "text": "Складчина Gemini AI ULTRA — 1 999 ₽/мес. Безлимит VEO 3 + Nano Banana 2. Telegram-канал с рабочими аккаунтами 24/7. Себестоимость ролика ~3,6₽. Studio бесплатно."}},
         {"@type": "Question", "name": "9 999 ₽ за обучение — это дорого?", "acceptedAnswer": {"@type": "Answer", "text": "За 9 999 ₽ — полное обучение, инструмент, поддержка. А можно начать со складчины — 1 999₽/мес за безлимит VEO 3 + Nano Banana 2. Два варианта входа — выбери свой."}},
         {"@type": "Question", "name": "Как быстро окупится?", "acceptedAnswer": {"@type": "Answer", "text": "Одна рекламная интеграция при 5K+ подписчиках — от 5 до 30 тыс. ₽. При регулярной публикации 5K — это 1–2 месяца. Если есть продукт — подписчики конвертируются в заявки напрямую."}},
@@ -330,7 +349,7 @@
 </div>
 </div>
 <div class="story-media">
-<img alt="Серия качает стабильнее удачи" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-03.jpg"/>
+<img alt="AI генерация видео — серия роликов через нейросеть Veo3" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-03.jpg"/>
 </div>
 </div>
 <div class="container story-block reverse">
@@ -340,7 +359,7 @@
 <p>Каждый ролик — мини-воронка. Крючок за 0.3 сек → середина удерживает → финал ведёт в профиль → из профиля в личку → заявка. В схеме — готовый маршрут с текстами на каждый шаг.</p>
 </div>
 <div class="story-media">
-<img alt="Просмотр → заявка" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-16.jpg"/>
+<img alt="Воронка продаж через AI Reels — от просмотра к заявке" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-16.jpg"/>
 </div>
 </div>
 <div class="container story-block">
@@ -350,7 +369,7 @@
 <p>Ролики короткие — 8 секунд. Ничего не монтируешь, не подбираешь музыку, не учишь Premiere. Studio собирает промпт-пакет за 2 минуты. Генерация 8-секундного видео в Google Flow — 2 минуты. Публикация — 1 минута. Итого: 5 минут на ролик. От 6 роликов в день — база. Каждый ролик расширяет твою аудиторию.</p>
 </div>
 <div class="story-media">
-<img alt="5 минут — и ролик готов" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-12.jpg"/>
+<img alt="Генерация Reels через AI за 5 минут — Ferixdi Studio" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-12.jpg"/>
 </div>
 </div>
 <div class="container" style="margin-bottom:32px">
@@ -383,7 +402,7 @@
 <p style="color:#5bf5c4;font-weight:700;font-size:13px;margin-top:14px">Не нужно придумывать сюжет — бери то, что уже залетело, и делай свою версию.</p>
 </div>
 <div class="story-media">
-<img alt="Режим по видео — копия ролика" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-14.jpg"/>
+<img alt="Копирование вирусного ролика через AI — режим по видео" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-14.jpg"/>
 </div>
 </div>
 <div class="container" style="margin-top:32px">
@@ -535,15 +554,15 @@
 <h2 style="text-align:center;margin-bottom:8px">Примеры AI‑генерации видео — всё создано нейросетью</h2>
 <p class="muted" style="text-align:center;max-width:54ch;margin:0 auto 24px">Ни актёров, ни операторов. Только Studio + Google Flow. Каждый кадр — результат моей работы через ту самую систему.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:16px">
-<div class="story-media"><img alt="AI Reels — пример 1" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-01.jpg"/></div>
-<div class="story-media"><img alt="AI Reels — пример 2" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-02.jpg"/></div>
-<div class="story-media"><img alt="AI Reels — пример 4" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-04.jpg"/></div>
-<div class="story-media"><img alt="AI Reels — пример 6" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-06.jpg"/></div>
-<div class="story-media"><img alt="AI Reels — пример 8" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-08.jpg"/></div>
-<div class="story-media"><img alt="AI Reels — пример 10" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-10.jpg"/></div>
-<div class="story-media"><img alt="AI Reels — пример 13" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-13.jpg"/></div>
-<div class="story-media"><img alt="AI Reels — пример 15" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-15.jpg"/></div>
-<div class="story-media"><img alt="AI Reels — пример 17" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-17.jpg"/></div>
+<div class="story-media"><img alt="Пример AI видео генерации — Reels через нейросеть 1" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-01.jpg"/></div>
+<div class="story-media"><img alt="Пример AI видео генерации — Reels через нейросеть 2" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-02.jpg"/></div>
+<div class="story-media"><img alt="AI генерация видео Veo3 — пример Reels 3" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-04.jpg"/></div>
+<div class="story-media"><img alt="AI генерация видео Veo3 — пример Reels 4" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-06.jpg"/></div>
+<div class="story-media"><img alt="Генерация Reels нейросетью — пример 5" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-08.jpg"/></div>
+<div class="story-media"><img alt="Генерация Reels нейросетью — пример 6" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-10.jpg"/></div>
+<div class="story-media"><img alt="AI видео через Gemini и Veo3 — пример 7" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-13.jpg"/></div>
+<div class="story-media"><img alt="AI видео через Gemini и Veo3 — пример 8" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-15.jpg"/></div>
+<div class="story-media"><img alt="Дешёвая генерация AI видео для Reels — пример 9" loading="lazy" decoding="async" width="800" height="447" src="assets/img/ai-17.jpg"/></div>
 </div>
 <div style="text-align:center;padding:8px 0 0">
 <a class="btn primary" href="#skladchina" style="font-size:15px;background:linear-gradient(135deg,#5bf5c4,#2ed8a3);border-color:rgba(0,255,200,.65);color:#0a0a0b">Складчина VEO 3 — 1 999₽/мес ↓</a>
