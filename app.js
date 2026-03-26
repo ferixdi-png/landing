@@ -324,8 +324,8 @@
 
   const counterMap = [
     { text: '44 млн', target: 44, suffix: ' млн' },
-    { text: '590+', target: 590, suffix: '+' },
-    { text: '32 000+', target: 32000, suffix: '+' },
+    { text: '620+', target: 620, suffix: '+' },
+    { text: '50 000+', target: 50000, suffix: '+' },
     { text: '~3,6 ₽', target: '~3,6', suffix: ' ₽', static: true },
   ];
 
