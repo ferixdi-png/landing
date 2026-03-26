@@ -93,9 +93,9 @@ body {
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
 
 /* === Typography === */
-h1, h2, h3 { font-weight: 800; letter-spacing: -.02em; line-height: 1.12; color: var(--text); }
+h1, h2, h3 { font-weight: 800; letter-spacing: -.02em; line-height: 1.28; color: var(--text); }
 h1 {
-  font-size: clamp(28px, 5vw, 52px);
+  font-size: clamp(24px, 3.8vw, 42px);
   background: linear-gradient(90deg, #fffaf2, #ffd84a, #e8b830, #ffd84a, #fffaf2);
   background-size: 200% 100%;
   -webkit-background-clip: text; background-clip: text; color: transparent;
@@ -105,12 +105,16 @@ h1 {
   0%,100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
+/* Second line of hero H1 — slightly smaller for visual hierarchy */
+.hero-sub { font-size: 0.82em; opacity: .88; display: block; margin-top: 6px; }
+.story { margin-bottom: 8px; }
+.gradient-line + .story, .gradient-line + section { margin-top: 0; }
 h2 {
-  font-size: clamp(22px, 3.5vw, 36px);
+  font-size: clamp(20px, 3vw, 30px);
   background: linear-gradient(135deg, #fffaf2 0%, #ffd84a 50%, #e8b830 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-h3 { font-size: clamp(17px, 2vw, 21px); }
+h3 { font-size: clamp(16px, 1.8vw, 20px); }
 a { text-decoration: none; color: inherit; }
 
 /* === Topbar === */
