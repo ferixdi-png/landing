@@ -7,11 +7,13 @@
 <title>FERIXDI — AI-контент, охваты и трафик</title>
 <meta name="description" content="AI-видео не ради просмотров. Система получения внимания и направления трафика на свои проекты или партнёрские программы.">
 <link rel="stylesheet" href="styles.css?v=2026-film-1">
+<link rel="stylesheet" href="film-upgrade.css?v=20260914-2">
 </head>
 <body>
 <div class="grain"></div>
 <div class="progress" id="progress"></div>
-<header class="nav">
+<div class="attentionRail" aria-hidden="true"><i id="attentionRailFill"></i><span>ATTENTION</span></div>
+<header class="nav" id="siteNav">
   <a class="brand" href="#top">FERIXDI</a>
   <nav class="navlinks" aria-label="Навигация">
     <a href="#feed">Контент</a>
@@ -41,6 +43,7 @@
         <div class="phoneTop"><span></span></div>
         <img src="02-ai-reels.jpg.jpeg" alt="AI-контент в ленте">
         <div class="phoneGlass"></div>
+        <div class="phoneSignal"><small>LIVE SIGNAL</small><strong>1.8M</strong></div>
       </div>
     </div>
 
@@ -76,6 +79,7 @@
         <img src="11-ai-reels.jpg.jpeg" alt="Пример AI Reels 9" loading="lazy">
       </div>
     </div>
+    <div class="feedSignals" aria-hidden="true"><b>472K</b><b>834K</b><b>1.8M</b><b>3.2M</b></div>
     <div class="feedOverlayText">ATTENTION → TRAFFIC</div>
   </div>
 </section>
@@ -89,6 +93,7 @@
 
 <section class="routes scene" id="routes">
   <div class="routesSticky">
+    <div class="routeJunction" aria-hidden="true"><span></span><i></i></div>
     <article class="route routeOwn">
       <div class="routeNum">ROUTE 01 / OWN PROJECT</div>
       <div class="routePortrait"><img src="01-ai-reels.jpg.jpeg" alt="Recurring creator" loading="lazy"></div>
@@ -98,7 +103,7 @@
     </article>
     <article class="route routeAffiliate">
       <div class="routeNum">ROUTE 02 / AFFILIATE</div>
-      <div class="routeEditorial">TRAFFIC</div>
+      <div class="routePortrait routePortraitRight"><img src="13-ai-reels.jpg.jpeg" alt="AI-креатор и партнёрский контент" loading="lazy"></div>
       <div class="routeLine"></div>
       <h3>ПАРТНЁРСКИЙ<br>ОФФЕР.</h3>
       <p>Если своего продукта нет, внимание можно направлять на подходящие аудитории партнёрские программы и монетизировать через конверсии.</p>
@@ -111,33 +116,29 @@
     <div class="eyebrow">SCENE 04 / SYSTEM</div>
     <h2 class="reveal">Не случайный залёт.<br><span class="gold">Повторяемый цикл.</span></h2>
     <div class="timeline">
-      <div class="step reveal"><small>01 / STRATEGY</small><h3>Задача</h3><p>Определяем аудиторию, цель и действие после просмотра.</p></div>
-      <div class="step reveal"><small>02 / CONTENT</small><h3>Серия</h3><p>Создаём AI-контент быстро и тестируем разные механики, а не ставим всё на один ролик.</p></div>
-      <div class="step reveal"><small>03 / SIGNALS</small><h3>Метрики</h3><p>Смотрим удержание, пересылки, переходы, клики и конечные действия.</p></div>
-      <div class="step reveal"><small>04 / SCALE</small><h3>Масштаб</h3><p>Усиливаем то, что приводит нужную аудиторию и даёт результат дальше по воронке.</p></div>
+      <div class="step reveal"><small>01 / STRATEGY</small><span class="stepGhost">01</span><h3>Задача</h3><p>Определяем аудиторию, цель и действие после просмотра.</p></div>
+      <div class="step reveal"><small>02 / CONTENT</small><span class="stepGhost">02</span><h3>Серия</h3><p>Создаём AI-контент быстро и тестируем разные механики, а не ставим всё на один ролик.</p></div>
+      <div class="step reveal"><small>03 / SIGNALS</small><span class="stepGhost">03</span><h3>Метрики</h3><p>Смотрим удержание, пересылки, переходы, клики и конечные действия.</p></div>
+      <div class="step reveal"><small>04 / SCALE</small><span class="stepGhost">04</span><h3>Масштаб</h3><p>Усиливаем то, что приводит нужную аудиторию и даёт результат дальше по воронке.</p></div>
     </div>
   </div>
 </section>
 
-<section class="proof scene" id="proof">
-  <div class="wrap">
-    <div class="eyebrow">SCENE 05 / PROOF</div>
-    <h2 class="reveal">Сначала я проверяю<br>это <span class="gold">на себе.</span></h2>
-    <div class="proofFrame">
-      <div class="proofMedia reveal">
-        <img src="12-ai-reels.jpg.jpeg" alt="AI-контент FERIXDI" loading="lazy">
-        <div class="proofCharacterEcho"><img src="01-ai-reels.jpg.jpeg" alt="AI-креатор" loading="lazy"></div>
-      </div>
-      <div class="proofCopy reveal">
-        <div>
-          <div class="mega">50M+</div>
-          <p>просмотров на AI-контенте и 50 000+ подписчиков. Для меня это не витрина цифр, а база тестов: хуки, герои, серийность, удержание, переходы.</p>
-        </div>
-        <div>
-          <p>Конкретные кейсы и примеры под твою задачу показываю лично в ЛС.</p>
-          <a class="caseLink magnetic" href="https://t.me/ferixdiii" target="_blank" rel="noreferrer">Попросить кейсы <span>↗</span></a>
-        </div>
-      </div>
+<section class="proofFilm" id="proof">
+  <div class="proofFilmPin">
+    <div class="proofWall" aria-hidden="true">
+      <img src="01-ai-reels.jpg.jpeg" alt="" loading="lazy"><img src="02-ai-reels.jpg.jpeg" alt="" loading="lazy"><img src="03-ai-reels.jpg.jpeg" alt="" loading="lazy"><img src="04-ai-reels.jpg.jpeg" alt="" loading="lazy">
+      <img src="05-ai-reels.jpg.jpeg" alt="" loading="lazy"><img src="06-ai-reels.jpg.jpeg" alt="" loading="lazy"><img src="07-ai-reels.jpg.jpeg" alt="" loading="lazy"><img src="08-ai-reels.jpg.jpeg" alt="" loading="lazy">
+      <img src="09-ai-reels.jpg.jpeg" alt="" loading="lazy"><img src="10-ai-reels.jpg.jpeg" alt="" loading="lazy"><img src="11-ai-reels.jpg.jpeg" alt="" loading="lazy"><img src="12-ai-reels.jpg.jpeg" alt="" loading="lazy">
+    </div>
+    <div class="proofFilmShade"></div>
+    <div class="proofFilmCore">
+      <div class="eyebrow">SCENE 05 / PROOF / FIELD TESTS</div>
+      <div class="proofMega">50M+</div>
+      <p>просмотров на AI-контенте и 50 000+ подписчиков</p>
+      <div class="proofStatus">ВНИМАНИЕ ПОЛУЧЕНО.</div>
+      <div class="proofQuestion">КУДА ОНО ПОШЛО?</div>
+      <a class="caseLink magnetic" href="https://t.me/ferixdiii" target="_blank" rel="noreferrer">Попросить кейсы <span>↗</span></a>
     </div>
   </div>
 </section>
@@ -172,5 +173,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script src="app.js?v=2026-film-1"></script>
+<script src="film-upgrade.js?v=20260914-2"></script>
 </body>
 </html>
